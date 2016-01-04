@@ -5,7 +5,7 @@
   angular.module('toaster', ['ngAnimate','ui.bootstrap'])
     .constant('toasterConfig', {
       'limit': 0,                   // limits max number of toasts
-      'tap-to-dismiss': false,
+      'tap-to-dismiss': true,
       'close-button': false,
       'newest-on-top': true,
       //'fade-in': 1000,            // done in css
