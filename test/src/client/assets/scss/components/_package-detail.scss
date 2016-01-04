@@ -1,0 +1,228 @@
+
+.PackageDetail {
+  background: white;
+}
+
+.PackageDetail-hero {
+  margin-bottom: rem-calc(30);
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: rem-calc(26);
+  }
+}
+
+.PackageDetail-aside {
+  margin-bottom: rem-calc(95);
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: rem-calc(46);
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: rem-calc(80);
+  }
+}
+
+.PackageDetail-tripAdvisor {
+  margin-bottom: rem-calc(50);
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: 0;
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-top: rem-calc(30);
+    margin-bottom: rem-calc(25);
+  }
+}
+
+.PackageDetail-travelPhotos {
+
+  // @include media-breakpoint-up(lg) {
+  //   margin-bottom: rem-calc(25);
+  // }
+}
+
+.PackageDetail-map {
+  display: none;
+  position: relative;
+  background-image: url("../../images/maps/barcelona-package-detail@2x.png");
+  background-repeat: no-repeat;
+  background-position: -100px -90px;
+  background-size: 1280px 634px;
+  width: 100vw;
+  height: 475px;
+
+  @include media-breakpoint-only(md) {
+    margin-left: -$grid-gutter-width / 2;
+    margin-right: -$grid-gutter-width / 2;
+  }
+
+  @include media-breakpoint-up(md) {
+    display: block;
+    margin-bottom: rem-calc(35);
+  }
+
+  @include media-breakpoint-up(lg) {
+    width: 100%;
+  }
+}
+
+.PackageDetail-map-image {
+  width: 100%;
+  max-width: initial;
+}
+
+.PackageDetail-map-tooltip {
+  $arrowSize: 20px;
+  position: absolute;
+  left: 381px;
+  bottom: 197px;
+  background-color: $brand-secondary;
+  color: white;
+  font-size: rem-calc(14);
+  padding: rem-calc(20);
+  z-index: 1;
+  width: rem-calc(300);
+
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: -$arrowSize;
+    width: 0;
+    height: 0;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, 0);
+    pointer-events: none;
+    border-left: $arrowSize solid transparent;
+    border-right: $arrowSize solid transparent;
+    border-top: $arrowSize solid $brand-secondary;
+  }
+
+  @include media-breakpoint-up(lg) {
+    bottom: 40px;
+    left: 588px;
+
+    &:before {
+      width: 0;
+      height: 0;
+      left: -$arrowSize;
+      top: 50%;
+      bottom: 50%;
+      transform: translate(0, -50%);
+      border-left: none;
+      border-right: $arrowSize solid $brand-secondary;
+      border-bottom: $arrowSize solid transparent;
+      border-top: $arrowSize solid transparent;
+    }
+  }
+}
+
+.PackageDetail-map-tooltip-header {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: rem-calc(10);
+  margin-bottom: rem-calc(15);
+  border-bottom: 1px dotted #fff;
+}
+
+.PackageDetail-map-tooltip-header-title {
+  font-size: rem-calc(24);
+  font-weight: $text-light;
+}
+
+.PackageDetail-map-tooltip-header-close {
+  .Icon * {
+    @include icon-color(white);
+    cursor: pointer;
+  }
+}
+
+.PackageDetail-disclaimer {
+  font-size: rem-calc(15);
+  margin-bottom: rem-calc(60);
+
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+}
+
+.PackageDetail-action {
+  @include media-breakpoint-up(md) {
+    margin: 0 auto rem-calc(100);
+    text-align: center;
+  }
+}
+
+.PackageDetail-selectButton {
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.PackageDetail-accordion {
+  margin-bottom: rem-calc(45);
+}
+
+.PackageDetail-panel {
+  margin-left: -$grid-gutter-width / 2;
+  margin-right: -$grid-gutter-width / 2;
+  border-bottom: 1px solid #999;
+  padding: rem-calc(5) 0;
+
+  .panel-heading {
+    margin-bottom: 0;
+  }
+}
+
+.PackageDetail-panel-header {
+  display: flex;
+  align-items: center;
+  padding: rem-calc(10) $grid-gutter-width / 2;
+
+  &:not(.collapsed) {
+    .PackageDetail-panel-header-indicator {
+      &--plus {
+        display: none;
+      }
+
+      &--minus {
+        display: inherit;
+      }
+    }
+  }
+
+  &.collapsed {
+    .PackageDetail-panel-header-indicator {
+      &--plus {
+        display: inherit;
+      }
+
+      &--minus {
+        display: none;
+      }
+    }
+  }
+}
+
+.PackageDetail-panel-header-amenityIcon {
+  margin-right: rem-calc(10);
+}
+
+.PackageDetail-panel-header-title {
+  font-size: rem-calc(18);
+  font-weight: $text-light;
+  flex: 1;
+}
+
+.PackageDetail-panel-header-indicator {
+  margin-left: rem-calc(10);
+}
+
+.PackageDetail-panel-collapseContent {
+  padding: 0 $grid-gutter-width / 2;
+}

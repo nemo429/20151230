@@ -1,0 +1,19 @@
+<div class="container-fluid Site-container">
+  <div class="AccommodationsList">
+    <div ng-repeat="room in row.categoryRooms">
+
+      <div class="container-fluid Site-container" ng-if="row.name && (row.categoryRooms.length > 0) && ($index === 0)">
+        <h2 class="AccommodationsGrid-category-title">{{row.name}}</h2>
+      </div>
+      <div class="container-fluid Site-container" ng-if="currentPackage">
+        <h2 class="AccommodationsGrid-category-title">{{currentPackage.packageName}}</h2>
+      </div>
+      <accommodation-list ng-click="scrollTo(gridRow,$event)">
+      </accommodation-list>
+
+      <accommodation-room-detail uib-collapse="!room.isSelected" class="AccommodationsGrid-roomDetail">
+      </accommodation-room-detail>
+      </div>
+    </div>
+  </div>
+</div>

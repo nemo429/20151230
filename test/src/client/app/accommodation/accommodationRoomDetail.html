@@ -1,0 +1,204 @@
+<div class="AccommodationsGrid-roomDetail" id="{{'rowDetail'+gridRow}}">
+<span><div class="RoomDetail RoomDetail--inline">
+  <div class="container-fluid Site-container" style="position: relative;">
+    <div class="RoomDetail-close hidden-lg-up js-sticky"
+         style="position: absolute; left: -145px; right: 1345px; bottom: auto; width: auto; margin-left: 0px; margin-right: 0px; margin-top: 0px; top: -130px;">
+      <a class="RoomDetail-close-button">
+        <svg xmlns="http://www.w3.org/2000/svg" class="injected-svg Icon" width="20.927" height="20.906" viewBox="-0.516 -0.089 20.927 20.906"
+             data-src="/assets/images/icons/close-x.svg">
+          <path class="Icon-property--stroke" fill="none" stroke="#454545" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                stroke-miterlimit="10" d="M.606 19.77L18.978 1.4M19.385 19.385L1 1"></path>
+        </svg>
+      </a></div>
+    <div
+      style="height: 0px; width: 0px; margin: 0px; border-spacing: 0px; border: 0px; padding: 0px; font-size: 1em; position: static; float: none;"></div>
+    <div class="row">
+      <div class="col-lg-8"><h1 class="RoomDetail-title">
+        {{currentRoom.roomTypeName}}</h1>
+
+        <p class="RoomDetail-description">{{currentRoom.description}}</p>
+        <section class="Section"><h2 class="Section-title">
+          Room Details</h2>
+          <ul class="row list-unstyled RoomDetail-offerings">
+            <!--Ng repeat on roomFeatures-->
+            <li class="col-xs-6 IconLabel" ng-repeat="feature in currentRoom.roomFeatures">
+              <img ng-src="{{feature.image.imageSource | imageUrlFilter}}">
+              <span class="IconLabel-label">{{feature.roomFeature}}</span>
+            </li>
+            <!--Ng repeat on roomFeatures-->
+          </ul>
+          <!--Ui Bootstrap carousel-->
+          <!--Ui Bootstrap carousel-->
+          <div class="Carousel RoomDetail-carousel">
+            <!--srcset="./assets/images/accommodations/gallery/felipe@1x.jpg, ./assets/images/accommodations/gallery/felipe@2x.jpg 2x" -->
+            <div class="Carousel-media"><img
+              class="img-responsive Carousel-media-image"
+              src="images/accommodations/gallery/felipe@1x.jpg"
+              alt=""><span
+              class="SVGIcon Carousel-media-play"><svg class="Icon" xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 59.9 59.9" enable-background="new 0 0 59.888 59.888" xml:space="preserve"><path class="Icon-property--stroke" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="M26.8 14.1c-3.7-2.4-6.6-0.8-6.6 3.6V42.2c0 4.4 3 6 6.6 3.6l17.6-11.5c3.7-2.4 3.7-6.3 0-8.7L26.8 14.1zM58.9 29.9c0 16-13 28.9-28.9 28.9C14 58.9 1 45.9 1 29.9 1 14 14 1 29.9 1 45.9 1 58.9 14 58.9 29.9z"></path></svg></span>
+            </div>
+            <div class="Carousel-controls"><a
+              class="Carousel-control Carousel-control--prev" href="#"><span
+              class="SVGIcon"><svg class="Icon" xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 22.1 37.1" enable-background="new 0 0 22.083 37.141" xml:space="preserve"><path class="Icon-property--fill" d="M3.2 0.5L22.1 18.6 3.2 36.6c-0.7 0.7-1.9 0.7-2.6 0 -0.7-0.7-0.7-1.8 0-2.5L16.8 18.6 0.5 3.1c-0.7-0.7-0.7-1.8 0-2.5C0.9 0.2 1.4 0 1.9 0 2.4 0 2.8 0.2 3.2 0.5z"></path></svg></span></a><a
+              class="Carousel-control Carousel-control--next" href="#"><span
+              class="SVGIcon"><svg class="Icon" xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" viewBox="0 0 22.1 37.1" enable-background="new 0 0 22.083 37.141" xml:space="preserve"><path class="Icon-property--fill" d="M3.2 0.5L22.1 18.6 3.2 36.6c-0.7 0.7-1.9 0.7-2.6 0 -0.7-0.7-0.7-1.8 0-2.5L16.8 18.6 0.5 3.1c-0.7-0.7-0.7-1.8 0-2.5C0.9 0.2 1.4 0 1.9 0 2.4 0 2.8 0.2 3.2 0.5z"></path></svg></span></a>
+            </div>
+          </div>
+          <!--Ui Bootstrap carousel-->
+          <!--Ui Bootstrap carousel-->
+        </section>
+        <section class="Section"><h2 class="Section-title">
+          Room Amenities</h2>
+          <ul class="list-unstyled RoomDetail-amenities">
+            <!--Amenities List-->
+            <!--Amenities List-->
+            <li class="col-xs-6 col-md-2 RoomDetail-amenity IconLabel IconLabel--stacked" ng-repeat="amenity in currentRoom.amenities">
+              <img ng-src="{{amenity.image.imageSource | imageUrlFilter}}">
+              <div class="IconLabel-label">{{amenity.roomFeature}}</div>
+            </li>
+            <!--Amenities List-->
+          </ul>
+        </section>
+        <hr class="Section-hr">
+        <section class="Section"><h2 class="Section-title">
+          Enhance Your Stay</h2>
+          <!--Services List Repeat-->
+          <div class="RoomDetail-enhancement" ng-repeat="service in services">
+            <div class="Enhancement"><label class="Enhancement-label Input"><input
+              type="checkbox" checked="" id="{{'service-'+$index}}" >
+              <svg xmlns="http://www.w3.org/2000/svg"
+                   xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="InputIndicator injected-svg Icon" x="0px" y="0px" width="20px"
+                   height="20px" viewBox="0 0 20 20" data-src="/assets/images/icons/checkbox.svg">
+                <title>Checkbox Off Icon</title>>
+                <g>
+                  <rect class="Icon-property--stroke InputIndicator-outline" y="0" fill="none" stroke="#000" stroke-width="1" width="20"
+                        height="20"></rect>
+                  <path class="Icon-property--stroke InputIndicator-on" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" d="   M4,9.548l4.286,4.441L16,5.995"></path>
+                </g>
+              </svg>
+              <span>{{service.serviceName}}</span></label>
+
+              <div class="Enhancement-price"><span>+$</span><span>{{service.serviceRate}}</span><span> </span>
+                <small><span>per </span><span>person</span></small>
+              </div>
+              <p class="Enhancement-description">{{service.description}}</p></div>
+            <div class="RoomDetail-dropdowns">
+              <div class="Input Input--iconRight RoomDetail-checkout RoomDetail-checkout--guests"><input type="text"
+                                                                                                         class="form-control form-control form-control--custom has-value"
+                                                                                                         value="{{numberOfGuests | guestsFilter}}" disabled="">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="injected-svg Icon" x="0px" y="0px" width="13px" height="9px"
+                     viewBox="0 0 13 9" data-src="./assets/images/icons/chevron-down.svg">
+                  <title>Chevron Down Icon</title>
+                  >
+                  <g type="MSPage">
+                    <g transform="translate(-809.000000, -509.000000)" type="MSArtboardGroup">
+                      <g transform="translate(522.000000, 144.000000)" type="MSLayerGroup">
+                        <g transform="translate(0.000000, 64.000000)" type="MSShapeGroup">
+                          <g transform="translate(0.000000, 280.000000)">
+                            <path class="Icon-property--stroke" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round"
+                                  stroke-linejoin="round" d="       M298.5,22l-5.25,6.223L288,22"></path>
+                          </g>
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+              <div class="Input Input--iconRight RoomDetail-checkout"><input
+                type="text" class="form-control form-control form-control--custom has-value" value="Sep 20" disabled="">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="injected-svg Icon" x="0px" y="0px" width="13px" height="9px"
+                     viewBox="0 0 13 9" data-src="./assets/images/icons/chevron-down.svg">
+                  <title>Chevron Down Icon</title>
+                  >
+                  <g type="MSPage">
+                    <g transform="translate(-809.000000, -509.000000)" type="MSArtboardGroup">
+                      <g transform="translate(522.000000, 144.000000)" type="MSLayerGroup">
+                        <g transform="translate(0.000000, 64.000000)" type="MSShapeGroup">
+                          <g transform="translate(0.000000, 280.000000)">
+                            <path class="Icon-property--stroke" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round"
+                                  stroke-linejoin="round" d="       M298.5,22l-5.25,6.223L288,22"></path>
+                          </g>
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="RoomDetail-enhancement">
+            <div class="Enhancement"><label class="Enhancement-label Input"><input
+              type="checkbox">
+              <svg xmlns="http://www.w3.org/2000/svg"
+                   xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="InputIndicator injected-svg Icon" x="0px" y="0px" width="20px"
+                   height="20px" viewBox="0 0 20 20" data-src="/assets/images/icons/checkbox.svg">
+                <title>Checkbox Off Icon</title>
+                >
+                <g>
+                  <rect class="Icon-property--stroke InputIndicator-outline" y="0" fill="none" stroke="#000" stroke-width="1" width="20"
+                        height="20"></rect>
+                  <path class="Icon-property--stroke InputIndicator-on" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" d="   M4,9.548l4.286,4.441L16,5.995"></path>
+                </g>
+              </svg>
+              <span>Wi-Fi Boost</span></label>
+
+              <div class="Enhancement-price"><span>+$</span><span>10</span><span> </span>
+                <small><span>per </span><span>night</span></small>
+              </div>
+              <p class="Enhancement-description">Kick our standard Wi-Fi speed up
+                a notch and upgrade to super high speeds throughout your stay. We proudly offer you free basic Wi-Fi connection but for guests who
+                like to stream movies or download large files, this is an excellent option to consider. </p></div>
+          </div>
+        </section>
+      </div>
+      <aside class="col-xs-12 col-lg-4 RoomDetail-pricingAside">
+        <div
+          style="height: 382px; width: 369.984px; margin: 0px; border-spacing: 0px; border: 0px; padding: 0px; font-size: 1em; position: static; float: none;"></div>
+        <div class="RoomDetail-pricingBox js-sticky sticky"
+             style="position: absolute; left: 15px; right: 15px; bottom: auto; width: auto; margin-left: 0px; margin-right: 0px; margin-top: 0px; top: 0px;">
+          <!--Close Button-->
+          <div class="RoomDetail-close RoomDetail-close--aside hidden-md-down" ng-click="closeRoomDetail(currentRoom)"><a
+            class="RoomDetail-close-button">
+            <svg xmlns="http://www.w3.org/2000/svg" class="injected-svg Icon" width="20.927" height="20.906" viewBox="-0.516 -0.089 20.927 20.906"
+                 data-src="/assets/images/icons/close-x.svg">
+              <path class="Icon-property--stroke" fill="none" stroke="#454545" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    stroke-miterlimit="10" d="M.606 19.77L18.978 1.4M19.385 19.385L1 1"></path>
+            </svg>
+          </a>
+          </div>
+          <!--Close Button-->
+          <!--Pricing Box and Calculations!-->
+          <div class="PricingBox">
+            <div class="PricingBox-content PricingBox-content--itemized">
+              <div class="PricingBox-options">
+                  <h2 class="PricingBox-title">{{currentRoom.roomTypeName}}</h2>
+                <!--DYNAMICALLY APPLY PACKAGE INFORMATION HERE!-->
+                <div class="PricingBox-option" ng-if="currentRoom.ratePlanType == 'PACKAGE'">
+                  <span>{{currentPackage.packageName}}</span><a href="#">?</a>
+                  <div class="PricingBox-option-text-detail"><b>${{currentPackage.lowestRate}} x {{numberOfDays | nightsFilter}}</b><span> </span><b>$940</b></div>
+                </div>
+                <!--DYNAMICALLY APPLY PACKAGE INFORMATION HERE!-->
+                <div class="PricingBox-option"><h2 class="PricingBox-title">
+                  Enhance Your Stay</h2><span>Breakfast Buffet </span><a href="#">?</a>
+
+                  <div class="PricingBox-option-text-detail">
+                    <b>{{numberOfGuests | guestsFilter}} x {{numberOfDays | daysFilter}} (Sep 20)</b><span> </span>
+                    <!--Take from factory, need to do different setting on numberOfDays above because is an enhancement-->
+                    <b>$120</b></div><!-- Calculate rate-->
+                </div>
+              </div>
+            </div>
+            <div class="PricingBox-subtotal"><b>Subtotal</b><span> </span><b>${{currentRoom.averageRate * numberOfDays}}</b></div>
+            <div class="RoomDetail-bookNow"><a ng-click="updateAccommodations(currentRoom); closeRoomDetail(currentRoom)" class="btn btn-primary btn-block js-book-cta">Book Room</a></div>
+          </div>
+          <!--Pricing Box and Calculations!-->
+        </div>
+      </aside>
+    </div>
+  </div>
+</div></span>
+</div>

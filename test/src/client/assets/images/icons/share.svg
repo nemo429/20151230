@@ -1,0 +1,13 @@
+<svg version="1.1" class="Icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="15.025px" height="15.024px" viewBox="0 0 15.025 15.024" xml:space="preserve">
+<title>Share Icon</title>
+<g>
+	<polyline class="Icon-property--stroke" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+		13.133,7.491 13.133,14.024 1,14.024 1,1.892 7.533,1.892"/>
+	<g>
+		<polyline class="Icon-property--stroke" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="
+			10.292,1 14.025,1 14.025,4.733"/>
+		<line class="Icon-property--stroke" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="7.426" y1="7.599" x2="14.025" y2="1"/>
+	</g>
+</g>
+</svg>

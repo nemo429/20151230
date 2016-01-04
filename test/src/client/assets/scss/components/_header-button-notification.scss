@@ -1,0 +1,45 @@
+
+.HeaderButtonNotification {
+  width: 100%;
+  height: rem-calc(80);
+  border: 1px solid #ccc;
+  border-top: none;
+  background: white;
+  display: flex;
+}
+
+.HeaderButtonNotification-image {
+  width: rem-calc(80);
+  height: rem-calc(80);
+}
+
+.HeaderButtonNotification-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: rem-calc(16);
+  overflow: hidden;
+  width: 100%;
+}
+
+.HeaderButtonNotification-title {
+  font-size: rem-calc(24);
+  font-weight: $text-light;
+  color: $body-color;
+  margin: 0;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex: 1;
+}
+
+.HeaderButtonNotification-close {
+  margin-left: rem-calc(10);
+  @include icon-size(rem-calc(14));
+  cursor: pointer;
+
+  &.Icon * {
+    @include icon-color(#bbb);
+  }
+}

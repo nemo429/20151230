@@ -1,0 +1,21 @@
+
+.InputGroup {
+
+  &--stacked {
+    .Input {
+      display: block;
+      margin-bottom: $spacer / 2;
+
+      > input[type="checkbox"],
+      > input[type="radio"] {
+        ~ .InputIndicator {
+          top: rem-calc(2);
+        }
+      }
+
+      + .Input {
+        margin-left: 0;
+      }
+    }
+  }
+}

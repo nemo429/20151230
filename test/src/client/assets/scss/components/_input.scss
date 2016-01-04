@@ -1,0 +1,106 @@
+
+.Input {
+  cursor: pointer;
+  position: relative;
+
+  &--iconRight,
+  &--iconLeft {
+    .Icon {
+      position: absolute;
+      top: rem-calc(14);
+      @include icon-size(rem-calc(22));
+
+      * {
+        @include icon-color(#bbb);
+      }
+    }
+  }
+
+  &--iconRight {
+    .form-control {
+      padding-right: rem-calc(60);
+    }
+
+    .Icon {
+      right: rem-calc(20);
+    }
+  }
+
+  &--iconLeft {
+    .form-control {
+      padding-left: rem-calc(60);
+    }
+
+    .Icon {
+      left: rem-calc(20);
+    }
+  }
+
+  > input[type="checkbox"],
+  > input[type="radio"] {
+    position: absolute;
+    // Put the input behind the label so it doesn't overlay text
+    z-index: -1;
+    opacity: 0;
+
+    ~ .InputIndicator {
+      position: absolute;
+      top: 0;
+      left: 0;
+      @include icon-size(rem-calc(20));
+
+      &--circle {
+        border-radius: 100%;
+      }
+
+      .InputIndicator-on {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+    }
+
+    &:focus ~ .InputIndicator {
+      @extend %InputIndicator-focus;
+    }
+
+    &:checked ~ .InputIndicator {
+      .InputIndicator-on {
+        opacity: 1;
+      }
+    }
+
+    &:active ~ .InputIndicator {
+      @extend %InputIndicator-focus;
+    }
+  }
+
+  &:focus,
+  &:active {
+    > input {
+      ~ .InputIndicator {
+        @extend %InputIndicator-focus;
+      }
+    }
+  }
+
+  + .Input {
+    margin-left: rem-calc(10);
+  }
+}
+
+label {
+  &.Input {
+    display: inline;
+    padding-left: rem-calc(25);
+  }
+}
+
+// Apply focus styling
+%InputIndicator-focus {
+  $input-focus-outline: $brand-secondary;
+  box-shadow: 0 0 0 1px rgba($input-focus-outline, 0.25);
+
+  .InputIndicator-outline {
+    @include icon-color($input-focus-outline);
+  }
+}

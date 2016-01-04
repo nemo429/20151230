@@ -1,0 +1,76 @@
+
+.IconButton {
+  $margin: rem-calc(9);
+  border: 1px solid #ccc;
+  background-color: $button-disabled-bg-color;
+  padding: rem-calc(6 20);
+  line-height: 0;
+  font-size: rem-calc(14);
+  color: $body-color;
+  font-weight: $text-regular;
+  overflow: hidden;
+  transition: all 0.4s ease;
+
+  + .IconButton {
+    border-left: transparent;
+  }
+
+  .Icon {
+    flex: none;
+    @include icon-size(rem-calc(26));
+  }
+
+  &:disabled,
+  .disabled {
+    .Icon * {
+      @include icon-color($button-disabled-border-color);
+    }
+  }
+
+  &--primary {
+    @include icon-button-hover($brand-primary);
+  }
+
+  &--secondary {
+    @include icon-button-hover($brand-secondary);
+  }
+
+  &--iconLeft {
+    .Icon {
+      margin-right: $margin;
+    }
+  }
+
+  &--iconRight {
+    .Icon {
+      margin-left: $margin;
+    }
+  }
+
+  &--circle {
+    padding: rem-calc(10);
+    border-radius: 50%;
+
+    .Icon {
+      @include icon-size(rem-calc(16));
+    }
+
+    &.IconButton--large {
+      .Icon {
+        @include icon-size(rem-calc(22));
+      }
+    }
+  }
+
+  &--reverse {
+    .Icon {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.IconButton-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}

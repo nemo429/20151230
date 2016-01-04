@@ -1,0 +1,54 @@
+<div class="col-xs-12 col-lg-4 Checkout-column">
+  <section class="Checkout-section">
+    <h1 class="Section-displayTitle">Guest Information</h1>
+    <div class="Checkout-guestInfo">
+      <fieldset class="form-group"><input type="text"
+                                          class="form-control form-control-lg form-control--custom js-input-firstname"
+                                          data-value="Tina"
+                                          placeholder="First Name"
+                                          ng-model="guestProfile.customer.givenName"></fieldset>
+      <fieldset class="form-group"><input type="text"
+                                          class="form-control form-control-lg form-control--custom js-input-lastname"
+                                          data-value="Fey"
+                                          placeholder="Last Name"
+                                          ng-model="guestProfile.customer.surName"></fieldset>
+      <fieldset class="form-group"><input type="text"
+                                          class="form-control form-control-lg form-control--custom js-input-email"
+                                          data-value="tina.fey@gmail.com"
+                                          placeholder="Email Address"
+                                          ng-model="guestProfile.customer.emails[0].email"></fieldset>
+      <fieldset class="form-group"><input type="text"
+                                          class="form-control form-control-lg form-control--custom js-input-phone"
+                                          data-value="+1 555-555-5555"
+                                          placeholder="Phone Number"
+                                          ng-model="guestProfile.customer.telephones[0].phoneNumber"></fieldset>
+      <fieldset class="form-group">
+        <div class="Input Input--iconRight Checkout-dropdown">
+          <input type="text"
+                 class="form-control form-control-lg form-control--custom"
+                 value="United States"
+                 placeholder="Country"
+                 ng-model="guestProfile.customer.address[0].countryCode">
+          <svg xmlns="http://www.w3.org/2000/svg"
+               xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="Icon injected-svg js-svg-inject" x="0px" y="0px" width="13px"
+               height="9px" viewBox="0 0 13 9" data-src="./assets/images/icons/chevron-down.svg">
+            <title>Chevron Down Icon</title>
+            <desc>Created with Sketch.</desc>
+            <g type="MSPage">
+              <g transform="translate(-809.000000, -509.000000)" type="MSArtboardGroup">
+                <g transform="translate(522.000000, 144.000000)" type="MSLayerGroup">
+                  <g transform="translate(0.000000, 64.000000)" type="MSShapeGroup">
+                    <g transform="translate(0.000000, 280.000000)">
+                      <path class="Icon-property--stroke" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" d="       M298.5,22l-5.25,6.223L288,22"></path>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </div>
+      </fieldset>
+    </div>
+  </section>
+</div>

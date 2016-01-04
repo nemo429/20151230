@@ -1,0 +1,96 @@
+{
+  "hotelCode": 1234,
+  "languageCode": "EN_US",
+  "currencyCode": "USD",
+  "reservations": [
+    {
+      "resGlobalInfo": {
+        "timeSpan": {
+          "start": "2015-11-25",
+          "end": "2015-11-30"
+        },
+        "guestCounts": [
+          {
+            "ageQualifyingCode": "ADULT",
+            "count": 2
+          },
+          {
+            "ageQualifyingCode": "CHILD",
+            "count": 1
+          },
+          {
+            "ageQualifyingCode": "INFANT",
+            "count": 1
+          }
+        ],
+        "guarantee": {
+          "guaranteesAccepted": [
+            {
+              "paymentCard": {
+                "cardType": "",
+                "cardCode": "",
+                "cardNumber": "",
+                "seriesCode": ""
+              }
+            }
+          ]
+        },
+        "specialRequest" : [
+          {
+            "requestCode" : ""
+          }
+        ]
+      },
+      "resGuests" : [
+        {
+          "profiles" : [
+            {
+              "shareAllMarketInd" : false,
+              "customer" : {
+                "givenName" : "",
+                "surName" : "",
+                "telephones" : [
+                  {
+                    "phoneUseType" : 0,
+                    "phoneNumber" : ""
+                  }
+                ],
+                "addresses" : [
+                  {
+                    "useType" : 0,
+                    "countryCode" : "",
+                    "stateCode" : "",
+                    "cityName" : "",
+                    "postalCode" : "",
+                    "addressLine1" : "",
+                    "addressLine2" : ""
+                  }
+                ],
+                "emails" : [
+                  {
+                    "email" : ""
+                  }
+                ]
+
+              }
+            }
+          ]
+        }
+      ],
+      "roomStays": {
+        "ratePlans": [
+          {
+            "ratePlanId": 0,
+            "ratePlanType": "PACKAGE"
+          }
+        ],
+        "roomRates": [
+          {
+            "numberOfUnits": 0,
+            "roomTypeCode": 0
+          }
+        ]
+      }
+    }
+  ]
+}

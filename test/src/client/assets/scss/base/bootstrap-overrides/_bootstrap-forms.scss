@@ -1,0 +1,16 @@
+
+.form-control {
+
+  &--custom {
+    border-top: transparent;
+    border-right: transparent;
+    border-left: transparent;
+    font-weight: $form-control-font-weight;
+    font-size: rem-calc(18);
+    border-radius: 0;
+
+    &.has-value {
+      background-color: $form-control-filled-bg-color;
+    }
+  }
+}

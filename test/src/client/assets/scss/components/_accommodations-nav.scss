@@ -1,0 +1,100 @@
+
+.AccommodationsNav {
+  margin-bottom: rem-calc(40);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: rem-calc(60);
+  }
+
+  @include media-breakpoint-up(lg) {
+    justify-content: flex-start;
+    margin-bottom: rem-calc(80);
+  }
+}
+
+.AccommodationsNav-layout {
+  text-align: right;
+
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+
+  @include media-breakpoint-up(md) {
+    flex: 1;
+  }
+}
+
+.AccommodationsNav-viewButton {
+  flex: 1;
+
+  .IconButton {
+    width: 100%;
+  }
+
+  @include media-breakpoint-up(md) {
+    flex: none;
+  }
+
+  @include media-breakpoint-up(xl) {
+    &.IconButton:not(.is-first) {
+      border-left: none;
+    }
+  }
+}
+
+.AccommodationsNav-filters {
+  flex: 0 0 100%;
+  order: 1;
+
+  @include media-breakpoint-up(md) {
+    display: flex;
+    flex: 100%;
+    margin-top: $spacer-y;
+  }
+
+  @include media-breakpoint-up(xl) {
+    flex: 0 0 60%;
+    order: inherit;
+    max-width: rem-calc(900);
+    margin-top: rem-calc(0);
+  }
+}
+
+.AccommodationsNav-filter {
+
+  @include media-breakpoint-down(sm) {
+    &:first-child,
+    + .AccommodationsNav-filter {
+      border-top: none;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    flex: 0 0 25%;
+
+    &--rates {
+      flex: 0 0 50%;
+    }
+
+    + .AccommodationsNav-filter {
+      border-left: none;
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    max-width: rem-calc(300);
+
+    flex: 1;
+
+    &--rates {
+      flex: 2;
+    }
+
+    &:first-child {
+      border-left: none;
+    }
+  }
+}

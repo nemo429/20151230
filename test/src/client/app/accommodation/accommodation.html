@@ -1,0 +1,140 @@
+<div class="Site-pageWrapper">
+  <div class="container-fluid">
+    <!--AccommodationsNav-->
+    <!--AccommodationsNav-->
+    <!--AccommodationsNav-->
+    <div class="AccommodationsNav">
+      <button type="button"
+              class="btn IconButton IconButton--iconLeft IconButton--secondary AccommodationsNav-viewButton is-first"
+              ng-class="{'is-active': toggleAcc.roomsView}"
+              ng-click="goRooms()">
+        <div class="IconButton-wrapper">
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="injected-svg Icon" width="26" height="25"
+                 viewBox="0 0 26 25"
+                 data-src="./assets/images/icons/rooms.svg">
+              <path class="Icon-property--fill" fill="#000"
+                    d="M19.173 25H1c-.276 0-.5-.223-.5-.5V12c0-.197.115-.375.293-.456l11.88-5.4c.116-.053.247-.06.37-.017l6.294 2.18c.2.07.336.258.336.47v15.724c0 .277-.223.5-.5.5zM1.5 24h17.173V9.136l-5.77-1.997L1.5 12.32V24z"></path>
+              <path class="Icon-property--fill" fill="#000"
+                    d="M12.85 25c-.278 0-.5-.223-.5-.5V7.04c0-.276.222-.5.5-.5.275 0 .5.224.5.5V24.5c0 .277-.225.5-.5.5M2.8 14.59c-.212 0-.41-.138-.477-.35-.083-.264.064-.545.327-.63l7.41-2.332c.265-.08.546.064.63.326.082.264-.065.544-.328.627l-7.41 2.334c-.052.017-.102.025-.152.025M2.8 17.323c-.232 0-.44-.162-.49-.397-.056-.27.117-.535.388-.592l7.41-1.557c.268-.062.536.117.593.387.057.27-.115.535-.386.592l-7.41 1.557c-.035.007-.07.01-.104.01M2.8 20.06c-.253 0-.47-.192-.497-.45-.03-.274.17-.52.445-.55l7.41-.778c.274-.033.522.17.55.445.03.274-.17.52-.444.55l-7.41.778c-.02.002-.037.004-.054.004M10.21 22.79H2.8c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h7.41c.278 0 .5.226.5.5s-.222.5-.5.5"></path>
+              <path class="Icon-property--fill" fill="#000"
+                    d="M25 25h-7.968c-.276 0-.5-.223-.5-.5s.224-.5.5-.5H24.5V3.386l-7.16-2.35-6.754 3.007v3.5c0 .277-.223.5-.5.5-.276 0-.5-.223-.5-.5V3.72c0-.198.117-.376.297-.457L17.108.045c.113-.05.242-.06.36-.02l7.688 2.523c.205.067.344.26.344.475v21.48c0 .275-.225.5-.5.5"></path>
+              <path class="Icon-property--fill" fill="#000"
+                    d="M21.852 7.1c-.277 0-.5-.224-.5-.5V4.556c0-.277.223-.5.5-.5.275 0 .5.223.5.5V6.6c0 .276-.225.5-.5.5M21.852 10.77c-.277 0-.5-.224-.5-.5V8.225c0-.277.223-.5.5-.5.275 0 .5.223.5.5v2.043c0 .276-.225.5-.5.5M21.852 14.44c-.277 0-.5-.226-.5-.5v-2.046c0-.276.223-.5.5-.5.275 0 .5.224.5.5v2.045c0 .275-.225.5-.5.5M21.852 18.107c-.277 0-.5-.223-.5-.5v-2.043c0-.276.223-.5.5-.5.275 0 .5.224.5.5v2.043c0 .278-.225.5-.5.5M21.852 21.777c-.277 0-.5-.223-.5-.5v-2.045c0-.275.223-.5.5-.5.275 0 .5.225.5.5v2.045c0 .278-.225.5-.5.5"></path>
+            </svg>
+          </div>
+          <span>Rooms</span></div>
+      </button>
+      <div class="AccommodationsNav-filters">
+        <div class="Dropdown AccommodationsNav-filter AccommodationsNav-filter--rates">
+          <!--<span class="Dropdown-label">Best Available Price – From $160</span>-->
+          <select title="Rate Plans"
+                  ng-options="(plan | ratePlanFilter) for plan in rateAvailPlans track by plan.ratePlanId"
+                  ng-disabled="$state.is('accommodation.package')"
+                  ng-model="navFilterData.ratePlanId"
+                  ng-change="setRatePlan()">
+          </select>
+        </div>
+        <div class="Dropdown AccommodationsNav-filter">
+          <!--<span class="Dropdown-label">Showing All Rooms</span>-->
+          <!--ng-disabled="roomCategoriesEnabled"-->
+          <!--ng-options="category as category for category in rateAvailCategories track by category.categoryId"-->
+          <select title="Rate Categories"
+                  ng-options="category as category.categoryName for category in rateAvailCategories track by category.categoryId"
+                  ng-disabled="$state.is('accommodation.package')"
+                  ng-model="navFilterData.rateCategories"
+                  ng-change="setCategory()">
+            <option value="">Showing All Rooms</option>
+          </select>
+        </div>
+        <div class="Dropdown AccommodationsNav-filter"><span class="Dropdown-label"
+        >Add Code</span>
+          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+               version="1.1" class="injected-svg Icon Dropdown-icon" x="0px" y="0px" width="12px"
+               height="12px" viewBox="0 0 12 12"
+               data-src="./assets/images/icons/add.svg">
+            <title>Add Icon</title>
+            >
+            <g type="MSPage">
+              <g transform="translate(-1198.000000, -402.000000)" type="MSArtboardGroup">
+                <g transform="translate(911.000000, 204.000000)" type="MSLayerGroup">
+                  <g transform="translate(43.000000, 102.000000)" type="MSShapeGroup">
+                    <g transform="translate(0.000000, 82.000000)">
+                      <g transform="translate(245.000000, 15.000000)">
+                        <path class="Icon-property--stroke" fill="none" stroke="#000"
+                              stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                              d="M5,10        V0"></path>
+                        <path class="Icon-property--stroke" fill="none" stroke="#000"
+                              stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                              d="M10,5        H0"></path>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </svg>
+        </div>
+      </div>
+      <!-- Packages -->
+      <!-- Packages -->
+      <!-- Packages -->
+      <button type="button"
+              class="btn IconButton IconButton--iconLeft IconButton--secondary AccommodationsNav-viewButton"
+              ng-class="{'is-active': toggleAcc.packageView}" ng-click="goPackages()">
+        <div class="IconButton-wrapper">
+          <div>
+            <svg xmlns="http://www.w3.org/2000/svg" class="injected-svg Icon" width="25" height="25"
+                 viewBox="0 0 25 25"
+                 data-src="./assets/images/icons/packages.svg">
+              <path class="Icon-property--fill"
+                    d="M23.47 12.877h-8.422c-.277 0-.5-.224-.5-.5s.223-.5.5-.5h8.42c.295 0 .532-.238.532-.532V8.102c0-.293-.237-.532-.53-.532H1.532c-.293 0-.533.24-.533.532v3.243c0 .294.24.532.533.532H9.93c.276 0 .5.224.5.5s-.224.5-.5.5H1.534C.688 12.877 0 12.19 0 11.345V8.102C0 7.258.688 6.57 1.533 6.57H23.47c.843 0 1.53.688 1.53 1.532v3.243c0 .844-.687 1.532-1.53 1.532"></path>
+              <path class="Icon-property--fill"
+                    d="M21.793 25H3.21c-.845 0-1.532-.687-1.532-1.53V13.41c0-.846.688-1.533 1.53-1.533h6.917c.277 0 .5.224.5.5s-.223.5-.5.5H3.21c-.294 0-.532.238-.532.532v10.06c0 .293.238.53.53.53h18.585c.293 0 .53-.237.53-.53V13.41c0-.295-.237-.533-.53-.533h-6.918c-.275 0-.5-.224-.5-.5s.225-.5.5-.5h6.918c.845 0 1.53.687 1.53 1.532v10.06c0 .843-.685 1.53-1.53 1.53M12.908 7.404c-.143 0-.272-.03-.392-.096-.196-.113-.32-.313-.337-.55-.004-.046 0-.092.007-.135-.013-.067-.013-.14.004-.21.503-2.18 1.3-3.763 2.587-5.13C15.293.732 16.54-.1 17.71.01c.577.054 1.044.34 1.35.82.763 1.202.577 3.128.084 4.41-.468 1.216-1.93 1.29-3.103 1.352-.544.028-1.06.054-1.413.174-.057.02-.16.074-.286.136-.577.287-1.05.502-1.432.502zM17.496 1c-.707 0-1.594.545-1.99.968-1.094 1.162-1.8 2.51-2.26 4.34.233-.095.513-.233.65-.3.18-.09.33-.162.41-.19.486-.163 1.066-.193 1.684-.224 1.162-.06 2.002-.146 2.22-.714.41-1.063.55-2.654.006-3.513-.14-.22-.33-.336-.6-.36-.04-.005-.08-.007-.12-.007z"></path>
+              <path class="Icon-property--fill"
+                    d="M12.094 7.404c-.383 0-.855-.215-1.432-.502-.127-.062-.23-.116-.29-.136-.352-.12-.866-.146-1.41-.174-1.175-.06-2.636-.136-3.103-1.353-.495-1.283-.68-3.21.08-4.408.308-.483.775-.768 1.353-.82C8.46-.104 9.71.73 10.225 1.28c1.287 1.368 2.084 2.95 2.586 5.13.017.072.017.144.004.21.01.044.01.09.01.136-.02.237-.142.437-.34.55-.117.067-.248.096-.39.096zM7.507 1c-.04 0-.08.002-.12.006-.27.025-.46.14-.602.362-.543.858-.402 2.45.006 3.512.22.567 1.06.653 2.222.714.615.03 1.197.062 1.682.224.084.028.232.1.412.19.14.067.416.205.65.3-.463-1.83-1.166-3.178-2.26-4.34C9.1 1.545 8.213 1 7.506 1z"></path>
+              <path class="Icon-property--fill"
+                    d="M10.125 24.74c-.275 0-.5-.222-.5-.5V7.07c0-.276.225-.5.5-.5.277 0 .5.224.5.5v17.17c0 .278-.223.5-.5.5M14.875 24.74c-.275 0-.5-.222-.5-.5V7.07c0-.276.225-.5.5-.5.277 0 .5.224.5.5v17.17c0 .278-.223.5-.5.5"></path>
+            </svg>
+          </div>
+          <span>Packages</span></div>
+      </button>
+      <!--Accommodations Layout: Grid || Rows-->
+      <div class="AccommodationsNav-layout">
+        <button type="button" class="btn IconButton IconButton--secondary" ng-click="goGrid()"
+                ng-class="{'is-active': toggleAcc.gridView}">
+          <div class="IconButton-wrapper">
+            <div>
+              <svg xmlns="http://www.w3.org/2000/svg" class="injected-svg Icon" width="25" height="25"
+                   viewBox="0 0 25 25"
+                   data-src="./assets/images/icons/grid-view.svg">
+                <path class="Icon-property--stroke" fill="none" stroke="#000"
+                      d="M.5.5h6.545v6.545H.5zM9.227.5h6.546v6.545H9.227zM17.954.5H24.5v6.545h-6.546zM.5 9.228h6.545v6.545H.5zM9.227 9.228h6.546v6.545H9.227zM17.954 9.228H24.5v6.545h-6.546zM.5 17.955h6.545V24.5H.5zM9.227 17.955h6.546V24.5H9.227zM17.954 17.955H24.5V24.5h-6.546z"></path>
+              </svg>
+            </div>
+          </div>
+        </button>
+        <button type="button" class="btn IconButton IconButton--secondary" ng-click="goList()"
+                ng-class="{'is-active': toggleAcc.listView}">
+          <div class="IconButton-wrapper">
+            <div>
+              <svg xmlns="http://www.w3.org/2000/svg" class="injected-svg Icon" width="25" height="25"
+                   viewBox="0 0 25 25"
+                   data-src="./assets/images/icons/list-view.svg">
+                <path class="Icon-property--stroke" fill="none" stroke="#000"
+                      d="M.5.5h24v6.545H.5zM.5 9.228h24v6.545H.5zM.5 17.955h24V24.5H.5z"></path>
+              </svg>
+            </div>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Accommodations Nav-->
+<!--Accommodations Nav-->
+<!--Accommodations Nav-->
+<!-----Accommodations Directive----->
+<span ui-view></span>
+
+</div>

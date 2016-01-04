@@ -1,0 +1,24 @@
+.Intl-DropDown {
+  position: fixed;
+  width: 250px;
+  //height: 250px;
+  z-index: 20;
+  right: 0;
+  border: 1px solid lightgray;
+  background-color: white;
+
+  .spacer{
+    margin: 10%;
+  }
+  .btn{
+    margin-right: 3%;
+    margin-top: 5%;
+  }
+  .dropper{
+    border-radius: 0;
+  }
+}
+
+.align-center {
+  text-align: center;
+}

@@ -1,0 +1,268 @@
+$border: solid 1px $header-border-color;
+
+.Header {
+  color: $header-color;
+  background-color: $header-bg-color;
+  text-align: center;
+  position: relative;
+
+  &--top {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+  }
+
+  &--hidden {
+    visibility: hidden;
+  }
+
+  &.is-navExpanded {
+    .Header-toggleBar {
+      opacity: 0;
+    }
+  }
+}
+
+.Header-nav {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include media-breakpoint-up(xl) {
+    flex-wrap: nowrap;
+  }
+}
+
+.Header-logo {
+  display: inline-flex;
+  flex: none;
+  padding: rem-calc(10 20);
+  background-color: $header-logo-bg-color;
+  border-right: $border;
+  z-index: 1;
+
+  @include media-breakpoint-up(xl) {
+    order: 1;
+  }
+
+  &-wrapper {
+    align-self: center;
+    max-width: rem-calc(86);
+
+    @include media-breakpoint-up(md) {
+      max-width: rem-calc(125);
+    }
+  }
+
+  &-image * {
+    @include icon-color(white);
+  }
+}
+
+.Header-toggleBar {
+  display: flex;
+  flex: 1;
+  align-items: stretch;
+  // So no double border with logo since some buttons get hidden in smaller
+  // sizes.
+  margin-left: -1px;
+  transition: opacity 0.3s ease;
+
+  @include media-breakpoint-up(xl) {
+    display: none;
+  }
+
+  .Header-step {
+    display: none;
+    justify-content: center;
+
+    @include media-breakpoint-down(sm) {
+      .HeaderButton-icon {
+        display: none;
+      }
+
+      .HeaderButton-wrapper {
+        width: 100%;
+      }
+    }
+
+    &.is-active {
+      display: inherit;
+    }
+
+    @include media-breakpoint-up(lg) {
+      &--total {
+        display: initial;
+      }
+    }
+  }
+}
+
+.Header-selectionBar {
+  flex: 100%;
+  border-top: $border;
+
+  @include media-breakpoint-up(xl) {
+    order: 2;
+    display: flex;
+    border: none;
+    // To override collapse setting if height is "0px"
+    height: auto !important;
+
+    &.in {
+      display: flex;
+    }
+
+    .Header-close {
+      &.SVGIcon {
+        display: none;
+      }
+    }
+
+    .HeaderButton {
+      &--intl {
+        display: none;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    text-align: left;
+
+    .Header-step {
+      border-left-color: transparent;
+    }
+
+    .HeaderButton {
+      padding: 0;
+      border-top: 1px solid $header-bg-color;
+      border-bottom: 2px solid $header-bg-color;
+      border-left-color: transparent;
+
+      &:not(.is-unactionable) {
+        &:hover {
+          border-top-color: $header-bg-color-hover;
+          border-bottom-color: $header-bg-color-hover;
+        }
+      }
+
+      &.is-active {
+        border-top-color: $header-bg-color-active;
+        border-bottom-color: $header-bg-color-active;
+
+        .HeaderButton-wrapper {
+          border: none;
+        }
+      }
+
+      &.is-incomplete {
+        color: rgba($header-color, 0.35);
+      }
+    }
+
+    .HeaderButton-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: rem-calc(10 0);
+      margin-left: rem-calc(20);
+      margin-right: rem-calc(20);
+      border-bottom: $border;
+    }
+
+    .HeaderButton-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .HeaderButton-label {
+      flex: 100%;
+      color: rgba($header-color, 0.5);
+    }
+
+    .HeaderButton-value {
+      margin-bottom: 0;
+    }
+
+    .HeaderButton-icon {
+      transform: rotateZ(0.75turn);
+      align-self: center;
+
+      &.SVGIcon {
+        margin: 0 0 rem-calc(7) 0;
+
+        .Icon {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.Header-selection {
+
+  &--intl {
+    padding-left: rem-calc(10);
+    padding-right: rem-calc(10);
+    flex: none;
+    align-self: stretch;
+    border-left: $border;
+
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+
+    @include media-breakpoint-up(xl) {
+      order: 3;
+    }
+  }
+}
+
+.Header-steps {
+  display: flex;
+  flex: 100%;
+}
+
+.Header-step {
+  border-left: $border;
+  flex: 2;
+
+  &:first-child {
+    border-left: none;
+  }
+
+  &--extended {
+    flex: 3;
+
+    @include media-breakpoint-up(xl) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+.Header-close {
+  width: 45px;
+  height: 45px;
+  display: block;
+  margin: rem-calc(20) auto;
+
+  @include media-breakpoint-up(md) {
+    margin: rem-calc(40) auto;
+  }
+
+  .Icon * {
+    @include icon-color(rgba($header-color, 0.5));
+  }
+}
+
+.Header-buttonImage {
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin: 10px auto;
+
+  .Icon * {
+    @include icon-color($header-color);
+  }
+}

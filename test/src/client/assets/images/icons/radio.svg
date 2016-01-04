@@ -1,0 +1,10 @@
+<svg version="1.1" class="Icon InputIndicator InputIndicator--circle" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="21px" height="21px"
+	 viewBox="-0.5 -0.5 21 21">
+<title>Radio On</title>
+<desc>Created with Sketch.</desc>
+<g>
+	<ellipse class="Icon-property--stroke InputIndicator-outline" fill="none" stroke="#000" cx="10" cy="10" rx="10" ry="10"/>
+	<ellipse class="Icon-property--fill InputIndicator-on" fill="#000" stroke-miterlimit="10" cx="10" cy="10" rx="6" ry="6"/>
+</g>
+</svg>

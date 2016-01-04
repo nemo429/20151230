@@ -1,0 +1,20 @@
+<svg version="1.1" class="Icon" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="21px" height="24px"
+	 viewBox="0 0 21 24">
+<title>Occupant</title>
+<desc>Created with Sketch.</desc>
+<g sketch:type="MSPage">
+	<g transform="translate(-185.000000, -335.000000)" sketch:type="MSArtboardGroup">
+		<g transform="translate(180.000000, 140.000000)" sketch:type="MSLayerGroup">
+			<g transform="translate(3.000000, 104.000000)" sketch:type="MSShapeGroup">
+				<g transform="translate(3.000000, 92.000000)">
+					<path class="Icon-property--stroke" fill="none"  stroke="#116eb5" stroke-width="1.5" stroke-linecap="round" d="M15.219,5.807
+						c0,3.212-2.682,5.811-5.984,5.811S3.247,9.019,3.247,5.807C3.247,2.604,5.933,0,9.235,0S15.219,2.604,15.219,5.807
+						L15.219,5.807z M14.248,9.887l-0.422-0.393c-1.098,1.288-2.736,2.125-4.591,2.125c-1.849,0-3.485-0.834-4.585-2.116
+						L4.216,9.887c0,0-4.216,4.353-4.216,11.932h18.468C18.468,14.239,14.248,9.887,14.248,9.887L14.248,9.887z"/>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

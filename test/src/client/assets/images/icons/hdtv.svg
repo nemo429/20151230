@@ -1,0 +1,27 @@
+<svg version="1.1" class="Icon" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="63px" height="51px"
+	 viewBox="0 0 63 51">
+<title>HDTV Icon</title>
+<desc>Created with Sketch.</desc>
+<g sketch:type="MSPage">
+	<g transform="translate(-425.000000, -1453.000000)" sketch:type="MSArtboardGroup">
+		<g transform="translate(0.000000, 664.000000)" sketch:type="MSLayerGroup">
+			<g transform="translate(183.000000, 731.000000)" sketch:type="MSShapeGroup">
+				<g transform="translate(242.000000, 58.000000)">
+					<path class="Icon-property--fill" d="M55.592,33.826H8.254c-0.553,0-1-0.447-1-1V7.312c0-0.552,0.447-1,1-1h47.338c0.553,0,1,0.448,1,1v25.514
+						C56.592,33.379,56.145,33.826,55.592,33.826L55.592,33.826z M9.254,31.826h45.338V8.312H9.254V31.826z"/>
+					<path class="Icon-property--fill" d="M31.923,45C17.63,45,5.346,43.156,1.356,40.412c-0.271-0.186-0.433-0.495-0.433-0.824V1.974
+						c0-0.553,0.447-1,1-1h60c0.554,0,1,0.447,1,1v37.614c0,0.329-0.161,0.639-0.435,0.824C58.5,43.156,46.216,45,31.923,45
+						L31.923,45z M2.923,39.035C7.006,41.384,18.722,43,31.923,43c13.201,0,24.917-1.616,29-3.965V2.974h-58V39.035L2.923,39.035z"
+						/>
+					<path class="Icon-property--fill" d="M19.755,36.882h4.337v2h-4.337V36.882z"/>
+					<path class="Icon-property--fill" d="M26.422,36.882h4.337v2h-4.337V36.882z"/>
+					<path class="Icon-property--fill" d="M33.087,36.882h4.337v2h-4.337V36.882z"/>
+					<path class="Icon-property--fill" d="M39.754,36.882h4.337v2h-4.337V36.882z"/>
+					<path class="Icon-property--fill" d="M11.893,48.975h40.061v2H11.893V48.975z"/>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

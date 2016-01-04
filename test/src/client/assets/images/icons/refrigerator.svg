@@ -1,0 +1,26 @@
+<svg version="1.1" class="Icon" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="63px" height="61px"
+	 viewBox="0 0 63 61">
+<title>Refrigerator Icon</title>
+<desc>Created with Sketch.</desc>
+<g sketch:type="MSPage">
+	<g transform="translate(-651.000000, -1447.000000)" sketch:type="MSArtboardGroup">
+		<g transform="translate(0.000000, 664.000000)" sketch:type="MSLayerGroup">
+			<g transform="translate(183.000000, 731.000000)" sketch:type="MSShapeGroup">
+				<g transform="translate(468.000000, 52.000000)">
+					<path class="Icon-property--fill" d="M61.879,50.2h-60c-0.553,0-1-0.447-1-1V1.508c0-0.552,0.447-1,1-1h60c0.553,0,1,0.448,1,1V49.2
+						C62.879,49.753,62.432,50.2,61.879,50.2L61.879,50.2z M2.879,48.2h58V2.508h-58V48.2z"/>
+					<path class="Icon-property--fill" d="M8.485,60.508c-0.087,0-0.176-0.012-0.265-0.035c-0.532-0.146-0.846-0.697-0.699-1.229l2.761-10.062
+						c0.146-0.535,0.695-0.846,1.229-0.701c0.532,0.146,0.845,0.697,0.699,1.229L9.448,59.771
+						C9.327,60.217,8.924,60.508,8.485,60.508"/>
+					<path class="Icon-property--fill" d="M55.273,60.508c-0.438,0-0.842-0.291-0.963-0.736l-2.767-10.08c-0.146-0.531,0.167-1.082,0.699-1.228
+						c0.53-0.147,1.083,0.166,1.229,0.699l2.766,10.08c0.146,0.532-0.168,1.083-0.699,1.229
+						C55.45,60.496,55.361,60.508,55.273,60.508"/>
+					<path class="Icon-property--fill" d="M9.44,33.744c-0.553,0-1-0.447-1-1v-14.75c0-0.552,0.447-1,1-1c0.552,0,1,0.448,1,1v14.75
+						C10.44,33.297,9.992,33.744,9.44,33.744"/>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

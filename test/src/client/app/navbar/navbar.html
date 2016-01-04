@@ -1,0 +1,212 @@
+<nav class="Header Header--top">
+  <div class="Header-nav">
+
+    <a class="Header-logo HeaderButton" href="/"
+       title="Andréu Landing Page">
+      <div class="Header-logo-wrapper">
+        <img class="img-responsive" ng-src="./images/global/m-logo-nav-andreu-hotel@2x.png">
+      </div>
+    </a>
+
+    <div class="Header-toggleBar" ng-click="toggle.collapse = !toggle.collapse; toggle.intlMenu = false">
+      <div class="Header-steps" ng-show="toggle.collapse">
+        <div class="HeaderButton Header-selection Header-step is-disabled is-unactionable">
+          <div class="HeaderButton-wrapper">
+            <div class="HeaderButton-content">
+              <div class="HeaderButton-label">{{navData.guestsrooms.label}}
+              </div>
+              <div class="HeaderButton-value">
+                <div>{{navData.guestsrooms.placeholder}}</div>
+              </div>
+            </div>
+            <div class="HeaderButton-toggle">
+              <img src="./images/icons/chevron-filled-small.svg">
+            </div>
+          </div>
+        </div>
+        <div class="HeaderButton Header-selection Header-step is-disabled is-unactionable">
+          <div class="HeaderButton-wrapper">
+            <div class="HeaderButton-content">
+              <div class="HeaderButton-label">
+                {{navData.dates.label}}
+              </div>
+              <div class="HeaderButton-value">
+              </div>
+              <div> {{navData.dates.placeholder}}</div>
+            </div>
+            <div class="HeaderButton-toggle">
+              <img class="SVGIcon HeaderButton-icon" src="./images/icons/chevron-down.svg">
+            </div>
+          </div>
+        </div>
+        <div
+          class="HeaderAccommodationsButton Header-selection Header-step is-active Header-step--extended"
+          ng-mouseenter="openDrawer()"
+          ng-mouseleave="closeDrawer()">
+          <span></span>
+          <!--Accommodations Reservation Drawer < md -->
+          <span>
+            <nav-bar-accommodations-drawer uib-collapse="!toggle.accommodationDraw">
+            </nav-bar-accommodations-drawer>
+          </span>
+
+          <div class="HeaderButton is-disabled is-incomplete is-unactionable is-active">
+            <div class="HeaderButton-wrapper">
+              <div class="HeaderButton-content">
+                <div class="HeaderButton-label">
+                  {{navData.accommodations.label}}
+                </div>
+                <div class="HeaderButton-value">
+                  <div>{{navData.accommodations.placeholder}}</div>
+                </div>
+              </div>
+              <div class="HeaderButton-toggle">
+                <img src="./images/icons/chevron-filled-small.svg">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="HeaderButton Header-selection Header-step Header-step--total is-disabled is-incomplete is-unactionable">
+          <div class="HeaderButton-wrapper">
+            <div class="HeaderButton-content">
+              <div class="HeaderButton-label">
+                {{navData.total.label}}
+              </div>
+              <div class="HeaderButton-value">
+                <div>{{navData.total.placeholder}}</div>
+              </div>
+            </div>
+            <div class="HeaderButton-toggle">
+              <img src="./images/icons/chevron-down.svg">
+              <img src="./images/icons/chevron-filled-small.svg">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--End of Toggle Header Bar-->
+
+    <!--International Button all views-->
+    <div class="Header-selection Header-selection--intl HeaderButton"
+         role="button" tabindex="0" ng-click="toggle.intlMenu = !toggle.intlMenu; toggle.collapse = true"
+         ng-class="{'is-active': toggle.intlMenu}">
+      <div class="HeaderButton-label">{{intLang.languageCode}} ({{intCurrency}})</div>
+      <span class="SVGIcon Header-buttonImage"><img src="./images/icons/globe.svg"></span>
+      <span class="SVGIcon HeaderButton-icon"><img class="SVGIcon HeaderButton-icon" src="./images/icons/chevron-down.svg"></span>
+    </div>
+
+    <!--Tablet/Mobile Collapse and Desktop Views-->
+    <div class="Header-selectionBar" uib-collapse="toggle.collapse">
+      <div role="button" tabindex="0" title="Guests &amp; Rooms"
+           ng-click="goToView('guestsandrooms')"
+           class="HeaderButton Header-selection Header-step"
+           ng-class="{'is-active': $state.includes('guestsandrooms')}">
+        <div class="HeaderButton-wrapper">
+          <div class="HeaderButton-content">
+            <div class="HeaderButton-label">
+              {{navData.guestsrooms.label}}
+            </div>
+            <div class="HeaderButton-value">
+              <div>{{navData.guestsrooms.placeholder}}</div>
+            </div>
+            <img class="SVGIcon HeaderButton-icon" src="./images/icons/chevron-down.svg"></div>
+        </div>
+      </div>
+
+      <!--Dates of Stay-->
+      <div role="button" tabindex="0" title="Dates of Stay"
+           ng-click="goToView('datesofstay')"
+           class="HeaderButton Header-selection Header-step"
+           ng-class="{'is-active': $state.includes('datesofstay')}">
+        <div class="HeaderButton-wrapper">
+          <div class="HeaderButton-content">
+            <div class="HeaderButton-label">
+              {{navData.dates.label}}
+            </div>
+            <div class="HeaderButton-value">
+              <div>{{navData.dates.placeholder}}</div>
+            </div>
+            <img class="SVGIcon HeaderButton-icon" src="./images/icons/chevron-down.svg"></div>
+        </div>
+      </div>
+      <!--Accommodations-->
+      <div
+        ng-click="goToView('accommodation.room')"
+        class="HeaderAccommodationsButton Header-selection Header-step Header-step--extended"
+        ng-mouseenter="openDrawer()"
+        ng-mouseleave="closeDrawer()">
+        <span></span>
+        <!--Accommodations Reservation Drawer-->
+        <span>
+          <nav-bar-accommodations-drawer uib-collapse="!toggle.accommodationDraw">
+          </nav-bar-accommodations-drawer>
+        </span>
+
+        <div class="HeaderButton" ng-class="{'is-active': $state.includes('accommodation')}">
+          <div class="HeaderButton-wrapper">
+            <div class="HeaderButton-content">
+              <div class="HeaderButton-label">
+                {{navData.accommodations.label}}
+              </div>
+              <div class="HeaderButton-value">
+                <div>{{navData.accommodations.placeholder}}</div>
+              </div>
+              <img class="SVGIcon HeaderButton-icon" src="./images/icons/chevron-down.svg"></div>
+          </div>
+        </div>
+      </div>
+
+      <!--Total-->
+      <div role="button" tabindex="0" title="Guests &amp; Rooms"
+           ng-click="goToView('total')"
+           class="HeaderButton Header-selection Header-step Header-step--total"
+           ng-class="{'is-active': $state.includes('total')}">
+        <div class="HeaderButton-wrapper">
+          <div class="HeaderButton-content">
+            <div class="HeaderButton-label">
+              {{navData.total.label}}
+            </div>
+            <div class="HeaderButton-value">
+              <div>{{navData.total.placeholder}}</div>
+            </div>
+            <img class="SVGIcon HeaderButton-icon" src="./images/icons/chevron-down.svg"></div>
+        </div>
+      </div>
+      <!--Expanded Menu Language Currency -->
+      <div role="button" tabindex="0" title="Language &amp; Currency"
+           class="HeaderButton Header-selection Header-step HeaderButton--intl"
+           ng-click="toggle.intlMenu = !toggle.intlMenu; toggle.collapse = !toggle.collapse">
+        <div class="HeaderButton-wrapper">
+          <div class="HeaderButton-content">
+            <div class="HeaderButton-label">Language &amp;
+              Currency
+            </div>
+            <div class="HeaderButton-value">
+              <div>{{intLang.description}} ({{intCurrency}})</div>
+            </div>
+            <img class="SVGIcon HeaderButton-icon" src="./images/icons/chevron-down.svg"></div>
+        </div>
+      </div>
+      <!-- collapse chevron -->
+      <div role="button" tabindex="0" title="Collapse Menu"
+           class="HeaderButton Header-selection Header-step HeaderButton--intl" ng-click="toggle.collapse = !toggle.collapse">
+        <div class="HeaderButton-wrapper">
+          <div class="HeaderButton-content">
+            <div class="HeaderButton-label">
+            </div>
+            <div class="HeaderButton-value">
+              <div></div>
+            </div>
+            <img class="CollapseChevron" src="./images/icons/chevron-filled.svg"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <intl-bar style="color: #000" ng-show="toggle.intlMenu"></intl-bar>
+</nav>
+<!--
+is-unactionable - disables clicking on the element
+is-incomplete - turns text gray
+
+-->

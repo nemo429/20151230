@@ -1,0 +1,29 @@
+<div class="AccommodationsGrid-card col-xs-12 col-md-6 col-lg-4">
+  <div class="CardGrid" ng-click="toggleRoomDetail(gridRow, room);" ng-class="{'is-selected': room.isSelected}">
+    <div class="CardGrid-wrapper">
+      <div class="CardGrid-media">
+        <img class="img-responsive" ng-src="{{room.images[0].imageSource}}" alt="{{room.roomTypeName}}">
+        <span class="label label-info CardGrid-label">{{room.roomTag}}</span>
+        <div class="CardGrid-actions">
+          <!--Will need filter to display currency symbol, later in future-->
+          <div class="CardGrid-price">${{room.averageRate}}</div>
+          <button class="btn btn-primary CardGrid-action" type="button" name="button" ng-click="updateAccommodations(room); closeRoomDetail(currentRoom); $event.stopPropagation();">Book
+          </button>
+        </div>
+      </div>
+      <div class="CardGrid-summary">
+        <a href="#"><h3 class="CardGrid-summary-title">{{room.roomTypeName}}</h3></a>
+        <ul class="CardGrid-summary-offerings list-unstyled">
+          <li class="CardGrid-summary-offering">
+            <span class="SVGIcon">
+            <img src="images/icons/bed.svg">
+            </span><span>{{room.roomFeatures[0].roomFeature}}</span></li>
+          <li class="CardGrid-summary-offering">
+            <span class="SVGIcon">
+            <img src="images/icons/occupant.svg">
+            </span><span>{{room.roomFeatures[2].roomFeature}}</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

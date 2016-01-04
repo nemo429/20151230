@@ -1,0 +1,67 @@
+<div class="Site-pageWrapper Dates">
+  <div class="container-fluid Site-container">
+    <div class="row row-xs-center Dates-header">
+      <div class="col-xs-12 col-md-2 Dates-code">
+      </div>
+      <div class="col-xs-12 col-md-8 text-center">
+        <h1 class="Dates-title">Dates of Stay</h1>
+      </div>
+    </div>
+    <div class="Dates-calendar">
+      <div class="Dates-calendar-button Dates-calendar-button--prev"><button type="button" class="btn btn-default IconButton IconButton--circle IconButton--large IconButton--reverse" disabled="disabled"><svg xmlns="http://www.w3.org/2000/svg" class="Icon injected-svg js-svg-inject" version="1.1" x="0" y="0" width="22.1" height="37.1" viewBox="0 0 22.1 37.1" enable-background="new 0 0 22.083 37.141" xml:space="preserve" data-src="./assets/images/icons/chevron-thin-right.svg">
+  <path class="Icon-property--fill" d="M3.2 0.5L22.1 18.6 3.2 36.6c-0.7 0.7-1.9 0.7-2.6 0 -0.7-0.7-0.7-1.8 0-2.5L16.8 18.6 0.5 3.1c-0.7-0.7-0.7-1.8 0-2.5C0.9 0.2 1.4 0 1.9 0 2.4 0 2.8 0.2 3.2 0.5z"></path>
+</svg></button></div>
+      <div class="Dates-calendar-button Dates-calendar-button--next"><button type="button" class="btn btn-default IconButton IconButton--circle IconButton--large"><svg xmlns="http://www.w3.org/2000/svg" class="Icon injected-svg js-svg-inject" version="1.1" x="0" y="0" width="22.1" height="37.1" viewBox="0 0 22.1 37.1" enable-background="new 0 0 22.083 37.141" xml:space="preserve" data-src="./assets/images/icons/chevron-thin-right.svg">
+  <path class="Icon-property--fill" d="M3.2 0.5L22.1 18.6 3.2 36.6c-0.7 0.7-1.9 0.7-2.6 0 -0.7-0.7-0.7-1.8 0-2.5L16.8 18.6 0.5 3.1c-0.7-0.7-0.7-1.8 0-2.5C0.9 0.2 1.4 0 1.9 0 2.4 0 2.8 0.2 3.2 0.5z"></path>
+</svg></button></div>
+      <div class="Dates-calendar-component">
+        <div class="Calendar js-calendar">
+          <header class="Calendar-header">
+            <nav class="Calendar-header-nav">
+              <div class="Calendar-header-button Calendar-header-button--prev">
+                <button type="button" class="btn btn-default IconButton IconButton--circle IconButton--large IconButton--reverse" disabled="disabled">
+                  <img class="Icon injected-svg js-svg-inject" src="./images/icons/chevron-thin-right.svg">PREV
+                </button>
+              </div>
+              <h1 class="Calendar-header-month">{{currentMonthName}} {{currentYear}}</h1>
+
+              <div class="Calendar-header-button Calendar-header-button--next">
+                <button type="button" class="btn btn-default IconButton IconButton--circle IconButton--large">
+                  <img class="Icon injected-svg js-svg-inject" src="./images/icons/icons/chevron-thin-right.svg">NEXT
+                </button>
+              </div>
+            </nav>
+            <div class="Calendar-headerWeek">
+              <div class="Calendar-headerWeek-day">Sun</div>
+              <div class="Calendar-headerWeek-day">Mon</div>
+              <div class="Calendar-headerWeek-day">Tue</div>
+              <div class="Calendar-headerWeek-day">Wed</div>
+              <div class="Calendar-headerWeek-day">Thu</div>
+              <div class="Calendar-headerWeek-day">Fri</div>
+              <div class="Calendar-headerWeek-day">Sat</div>
+            </div>
+          </header>
+          <div class="Calendar-month">
+            <calendar-weeks
+              class="Calendar-week"
+              ng-repeat="i in numToArray(5)"
+              week-attribute="{{$index+1}}">
+            </calendar-weeks>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Buttons-->
+    <div class="Dates-ctas text-center">
+      <button
+        class="Dates-cta Dates-cta--update btn btn-primary js-update-dates-btn"
+        ng-click="submitDates()">{{buttonMsg}}</button>
+      <button
+        class="Dates-cta Dates-cta--back btn btn-primary btn-primary-outline js-go-back-btn"
+        ui-sref="guestsandrooms">Go Back</button>
+    </div>
+  </div>
+
+  <!--<toaster-container toaster-options="{'time-out':0, 'close-button':false, 'animation-class': 'toast-bottom-full-width'}">-->
+  <!--</toaster-container>-->
+</div>

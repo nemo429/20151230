@@ -1,0 +1,10 @@
+<div class="AccommodationsGrid" ng-show="toggleAcc.gridView">
+  <accommodation-grid-row ng-repeat="row in categorized"
+                          class="AccommodationsGrid-category"
+                          specific-row="{{$index}}"></accommodation-grid-row>
+</div>
+<div class="AccommodationsGrid" ng-show="toggleAcc.listView">
+  <accommodation-list-row ng-repeat="row in categorized"
+                          class="AccommodationsGrid-category"
+                          specific-row="{{$index+1}}"></accommodation-list-row>
+</div>

@@ -1,0 +1,20 @@
+<calendar-days
+  id="{{calendarCells[($index+1) + (weekIndex*7) - 8].date}}"
+  ng-init="applyDefaultClasses(calendarCells[($index+1) + (weekIndex*7) - 8])"
+  ng-repeat="i in numToArray(7)"
+  class="Calendar-day"
+  ng-class="{
+    'is-start-date' : calendarCells[($index+1) + (weekIndex*7) - 8].startDate,
+    'is-end-date': calendarCells[($index+1) + (weekIndex*7) - 8].endDate,
+    'is-in-range': calendarCells[($index+1) + (weekIndex*7) - 8].inRangeDate,
+    'Calendar-day--blank': calendarCells[($index+1) + (weekIndex*7) - 8].blankDate,
+    'Calendar-day--past': calendarCells[($index+1) + (weekIndex*7) - 8].pastDate,
+    'is-today': calendarCells[($index+1) + (weekIndex*7) - 8].todayDate,
+    'is-sold-out': calendarCells[($index+1) + (weekIndex*7) - 8].soldOutDate,
+    'is-disabled': calendarCells[($index+1) + (weekIndex*7) - 8].disabledDate
+  }"
+  ng-click="selectDates(calendarCells[($index+1) + (weekIndex*7) - 8], $event); helloTest('hi')">
+  <!-- form and submit ("") -->
+  <!-- Prev and Next -->
+  <!-- currency menu update currency format -->
+</calendar-days>

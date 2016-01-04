@@ -1,0 +1,36 @@
+
+.Enhancement {
+  // Empty for now
+}
+
+.Enhancement-label {
+  font-size: rem-calc(24);
+  color: $brand-secondary;
+  font-weight: 100;
+
+  .Icon {
+    margin-right: rem-calc(8);
+    @include icon-size(rem-calc(20));
+  }
+
+  > input[type="checkbox"],
+  > input[type="radio"] {
+    ~ .Icon.InputIndicator {
+      top: rem-calc(4);
+    }
+  }
+}
+
+.Enhancement-price {
+  font-size: rem-calc(24);
+  font-weight: 100;
+  margin-bottom: rem-calc(12);
+
+  small {
+    font-size: rem-calc(16);
+  }
+}
+
+.Enhancement-description {
+  margin-bottom: 0;
+}

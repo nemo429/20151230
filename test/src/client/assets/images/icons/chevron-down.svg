@@ -1,0 +1,18 @@
+<svg version="1.1" class="Icon" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="13px" height="9px"
+	 viewBox="0 0 13 9">
+<title>Chevron Down Icon</title>
+<desc>Created with Sketch.</desc>
+<g sketch:type="MSPage">
+	<g transform="translate(-809.000000, -509.000000)" sketch:type="MSArtboardGroup">
+		<g transform="translate(522.000000, 144.000000)" sketch:type="MSLayerGroup">
+			<g transform="translate(0.000000, 64.000000)" sketch:type="MSShapeGroup">
+				<g transform="translate(0.000000, 280.000000)">
+					<path class="Icon-property--stroke" fill="none" stroke="#FFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="
+						M298.5,22l-5.25,6.223L288,22"/>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

@@ -1,0 +1,45 @@
+
+.HeaderNotification {
+  background-color: $header-notification-bg-color;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  width: 100%;
+  height: 100%;
+  max-height: rem-calc(66);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform $easeInOutCubic 0.3s;
+
+  @include media-breakpoint-up(md) {
+    max-height: rem-calc(85);
+  }
+
+  // These are created by React's TimeoutTransitionGroup component
+  &-enter {
+    transform: translateY(-100%);
+
+    &-active {
+      transform: translateY(0);
+    }
+  }
+
+  &-leave {
+    transform: translateY(0);
+
+    &-active {
+      transform: translateY(-100%);
+    }
+  }
+}
+
+.HeaderNotification-message {
+  font-size: rem-calc(18);
+  font-weight: 100;
+
+  @include media-breakpoint-up(md) {
+    font-size: rem-calc(30);
+  }
+}

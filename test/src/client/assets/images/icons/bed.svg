@@ -1,0 +1,22 @@
+<svg version="1.1" class="Icon" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="25px" height="25px"
+	 viewBox="0 0 25 25">
+<title>Bed Icon</title>
+<desc>Created with Sketch.</desc>
+<g sketch:type="MSPage">
+	<g transform="translate(-184.000000, -290.000000)" sketch:type="MSArtboardGroup">
+		<g transform="translate(180.000000, 140.000000)" sketch:type="MSLayerGroup">
+			<g transform="translate(3.000000, 104.000000)" sketch:type="MSShapeGroup">
+				<g transform="translate(2.000000, 47.000000)">
+					<path class="Icon-property--stroke" fill="none"  stroke="#116eb5" stroke-width="1.5" stroke-linejoin="round" d="M23.219,0.003v23.226V0.003z
+						 M0,16.107h23.219H0z M0,6.254v16.975V6.254z M15.041,10.538c-0.003,1.263,1.02,2.292,2.281,2.294
+						c1.264,0.004,2.291-1.02,2.295-2.283c0.002-1.264-1.021-2.29-2.282-2.292C16.071,8.254,15.043,9.273,15.041,10.538
+						L15.041,10.538z"/>
+					<path class="Icon-property--stroke" fill="none"  stroke="#116eb5" stroke-width="1.5" d="M12.754,8.255c0,0-9.151-0.145-9.151,4.575h9.139
+						L12.754,8.255L12.754,8.255z"/>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

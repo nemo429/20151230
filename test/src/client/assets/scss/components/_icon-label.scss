@@ -1,0 +1,36 @@
+
+.IconLabel {
+  display: flex;
+  margin-bottom: $iconlabel-margin-y;
+
+  .Icon {
+    margin-right: $iconlabel-margin-x;
+  }
+
+  &--right {
+    .Icon {
+      margin-left: $iconlabel-margin-x;
+    }
+  }
+
+  &--stacked {
+    display: inline-block;
+    text-align: center;
+
+    .Icon {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}
+
+.IconLabel-icon {
+  flex: none;
+  @include icon-size(rem-calc(24));
+}
+
+.IconLabel-label {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-weight: 100;
+}

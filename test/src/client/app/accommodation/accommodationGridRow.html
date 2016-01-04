@@ -1,0 +1,15 @@
+<div class="container-fluid Site-container" ng-if="row.name && (row.categoryRooms.length > 0)">
+  <h2 class="AccommodationsGrid-category-title">{{row.name}}</h2>
+</div>
+<div class="container-fluid Site-container" ng-if="currentPackage ">
+  <h2 class="AccommodationsGrid-category-title">{{currentPackage.packageName}}</h2>
+</div>
+<div class="container-fluid Site-container">
+  <div class="AccommodationsGrid-row row " ng-class="{'is-showing-details': myGridNumber == gridRow}">
+    <accommodation-grid id="{{room.id}}" ng-repeat="room in row.categoryRooms" ng-click="scrollTo(gridRow,$event)">
+    </accommodation-grid>
+  </div>
+  <accommodation-room-detail
+    uib-collapse="!(myGridNumber == gridRow)" class="AccommodationsGrid-roomDetail">
+  </accommodation-room-detail>
+</div>

@@ -1,0 +1,31 @@
+
+.Site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color: $body-bg;
+}
+
+.Site-content {
+  flex: 1;
+  overflow: hidden;
+}
+
+.Site-pageWrapper {
+  margin-top: rem-calc(36);
+  transition: opacity ease 0.3s;
+  opacity: 1;
+
+  &.is-disabled {
+    pointer-events: none;
+    opacity: 0.25;
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-top: rem-calc(50);
+  }
+}
+
+.Site-container {
+  max-width: map-get($grid-breakpoints, xl);
+}

@@ -1,0 +1,37 @@
+
+.btn {
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+
+  // FIXME: Bootstrap bug – `$btn-padding-y` `$btn-padding-x` variables don't
+  // override because the original settings don't have `!default` included.
+  // Override the value for now until next release. Once fixed `padding` can be
+  // removed.
+  padding: rem-calc(12 19);
+
+  &.disabled,
+  &:disabled {
+    color: $button-disabled-color;
+    background-color: $button-disabled-bg-color;
+    border-color: $button-disabled-border-color;
+    opacity: 1;
+
+    &:hover,
+    &:focus {
+      color: $button-disabled-color;
+      background-color: $button-disabled-bg-color;
+      border-color: $button-disabled-border-color;
+    }
+  }
+}
+
+.btn-primary-outline {
+  $active-background: darken($btn-primary-bg, 10%);
+  $active-border: darken($btn-primary-border, 12%);
+
+  @include hover-focus {
+    color: $active-background;
+    background-color: $body-bg;
+        border-color: $active-border;
+  }
+}

@@ -1,0 +1,16 @@
+<div class="HeaderAccommodationsButton-hoverItems">
+  <div class="HeaderButtonNotification" ng-repeat="room in navData.accommodations.rooms track by $index">
+    <img class="img-responsive HeaderButtonNotification-image" ng-src="{{room.images[0].imageSource}}" alt="">
+    <div class="HeaderButtonNotification-body">
+      <h1 class="HeaderButtonNotification-title">{{room.roomTypeName}}</h1>
+      <!--Remove Icon-->
+      <!--<svg ng-click="removeAccommodation(room, $index)" xmlns="http://www.w3.org/2000/svg" class="injected-svg Icon HeaderButtonNotification-close" width="20.927" height="20.906"-->
+      <svg xmlns="http://www.w3.org/2000/svg" class="injected-svg Icon HeaderButtonNotification-close" width="20.927" height="20.906"
+           viewBox="-0.516 -0.089 20.927 20.906" data-src="./images/icons/close-x.svg">
+        <path class="Icon-property--stroke" fill="none" stroke="#454545" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+              stroke-miterlimit="10" d="M.606 19.77L18.978 1.4M19.385 19.385L1 1"></path>
+      </svg>
+      <!--Remove Icon-->
+    </div>
+  </div>
+</div>

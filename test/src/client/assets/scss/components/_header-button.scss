@@ -1,0 +1,187 @@
+
+.HeaderButton {
+  background-color: $header-bg-color;
+  color: $header-color;
+  user-select: none;
+  touch-action: manipulation;
+  position: relative;
+  padding: rem-calc(10 20);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    background-color: transparent;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+  }
+
+  &:focus,
+  &:hover {
+    color: $header-color;
+    text-decoration: none;
+  }
+
+  &:not(.is-unactionable) {
+    &:hover {
+      background-color: $header-bg-color-hover;
+    }
+  }
+
+  &:focus {
+    z-index: 1;
+    background-color: $header-bg-color;
+    outline: rgba(0, 0, 0, 0) 0;
+    position: relative;
+
+    &:before {
+      background-color: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  &:active {
+    &:after {
+      background-color: transparent;
+      border: transparent;
+    }
+  }
+
+  &.is-active,
+  &.is-incomplete {
+    cursor: default;
+  }
+
+  &.is-active {
+    &:not(.is-disabled) {
+      background-color: $header-bg-color-active;
+    }
+
+    .HeaderButton-icon {
+      display: none;
+    }
+
+    .HeaderButton-label {
+      color: $header-color;
+    }
+
+    @include media-breakpoint-up(xl) {
+      &:after {
+        $arrowSize: rem-calc(18);
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        right: 50%;
+        width: 0;
+        height: 0;
+        display: block;
+        content: "";
+        pointer-events: none;
+        transform: translate(-50%, 0);
+        border-left: $arrowSize solid transparent;
+        border-right: $arrowSize solid transparent;
+        border-bottom: $arrowSize solid $header-button-arrow-color;
+        transition: transform 0.3s ease;
+      }
+    }
+  }
+
+  &.is-incomplete {
+    background-color: $header-bg-color;
+    color: rgba($header-color, 0.35);
+
+    .HeaderButton-icon {
+      display: none;
+    }
+  }
+}
+
+.HeaderButton-wrapper {
+  z-index: 1;
+  position: relative;
+
+  @include media-breakpoint-down(sm) {
+    display: flex;
+  }
+}
+
+.HeaderButton-content {
+  @include media-breakpoint-down(lg) {
+    flex: 1;
+  }
+}
+
+.HeaderButton-toggle {
+  align-self: center;
+  margin-top: rem-calc(4);
+  height: rem-calc(24);
+
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
+
+  .Icon {
+    @include icon-size(rem-calc(24));
+
+    * {
+      @include icon-color(rgba($header-color, 0.5));
+    }
+  }
+}
+
+
+.HeaderButton-label {
+  font-size: rem-calc(8);
+  text-transform: uppercase;
+  line-height: 1;
+
+  @include media-breakpoint-up(md) {
+    font-size: rem-calc(12);
+  }
+}
+
+.HeaderButton-value {
+  font-size: rem-calc(20);
+  font-weight: 300;
+  line-height: 1.2;
+  margin-bottom: rem-calc(8);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  * {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  @include media-breakpoint-up(md) {
+    font-size: rem-calc(30);
+  }
+}
+
+.HeaderButton-icon {
+  width: rem-calc(10);
+  display: block;
+  margin: 0 auto;
+
+  svg {
+    opacity: 0.5;
+    display: block;
+
+    * {
+      stroke: $header-button-icon-color;
+    }
+  }
+}
+
+.CollapseChevron {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}

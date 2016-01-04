@@ -1,0 +1,60 @@
+
+//
+// Most styles are being used by react-select –
+// node_modules/react-select/scss/default.
+//
+
+.Select {
+  font-size: rem-calc(14);
+
+  &.is-open {
+
+    .Select-control {
+      border-color: #444;
+    }
+  }
+
+  &--dropdown {
+    .Select-arrow {
+      background-image: url('../images/icons/add.svg');
+    }
+  }
+}
+
+.Select-menu-outer {
+  border-top-color: $select-input-border-color;
+  border-left-color: #444;
+  border-right-color: #444;
+  border-bottom-color: #444;
+}
+
+.Select-option {
+  border-top: 1px solid $select-input-border-color;
+  transition: all 0.3s ease;
+
+  &:first-child {
+    border-top-color: transparent;
+  }
+}
+
+.Select-arrow-zone {
+  padding-right: rem-calc(10);
+}
+
+:not(.Select--multi) {
+  > .Select-control {
+    .Select-value {
+      padding-right: rem-calc(25);
+    }
+  }
+}
+
+.Select-arrow {
+  $size: rem-calc(12);
+  background: url('../images/icons/chevron-tiny-down.svg') center center no-repeat;
+  background-size: $size;
+  width: $size;
+  height: $size;
+  border: none;
+  display: block;
+}

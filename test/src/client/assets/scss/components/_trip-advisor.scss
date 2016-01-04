@@ -1,0 +1,56 @@
+
+.TripAdvisor {
+  font-size: rem-calc(14);
+
+  .Section-title {
+    margin-bottom: rem-calc(12);
+  }
+
+  @include media-breakpoint-up(md) {
+    border: rem-calc(1) solid #35a24b;
+    padding: $grid-gutter-width / 2;
+  }
+}
+
+.TripAdvisor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: $grid-gutter-width / 2;
+}
+
+.TripAdvisor-section {
+  &--reviews {
+    padding-bottom: 0;
+  }
+}
+
+.TripAdvisor-rating {
+  font-size: rem-calc(12);
+}
+
+.TripAdvisor-rating-report {
+  display: flex;
+}
+
+.TripAdvisor-rating-x {
+  margin-right: rem-calc(10);
+
+  .Icon {
+    @include icon-size(rem-calc(13));
+
+    * {
+      @include icon-color(#5cb85c);
+    }
+  }
+}
+
+.TripAdvisor-rating-totals {
+  font-size: rem-calc(12);
+}
+
+.TripAdvisor-review-title {
+  font-size: rem-calc(24);
+  font-weight: $text-light;
+  color: $brand-secondary;
+}

@@ -1,0 +1,117 @@
+
+.Footer {
+	padding: rem-calc(42 10 28 10);
+	font-size: rem-calc(12);
+	background-color: #fff;
+
+	@include media-breakpoint-down(md) {
+		text-align: center;
+	}
+
+	@include media-breakpoint-up(lg) {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
+
+.Footer-logo {
+	display: block;
+	margin: 0 auto rem-calc(20) auto;
+
+	@include media-breakpoint-up(lg) {
+		margin: rem-calc(0 30 3 0);
+	}
+
+	&-image {
+		@include icon-color($brand-primary);
+	}
+}
+
+.Footer-content {
+	@include media-breakpoint-up(lg) {
+		text-align: right;
+		line-height: rem-calc(24);
+	}
+}
+
+.Footer-contact {
+	display: block;
+	margin-bottom: rem-calc(18);
+
+	@include media-breakpoint-up(md) {
+		margin-bottom: rem-calc(10);
+	}
+
+	@include media-breakpoint-up(lg) {
+		display: inline;
+	}
+
+	&-address {
+		margin-bottom: rem-calc(8);
+
+		@include media-breakpoint-down(sm) {
+			display: block;
+		}
+
+		@include media-breakpoint-up(md) {
+			border-right: $footer-divider-border;
+			padding-right: rem-calc(8);
+		}
+	}
+
+	&-number {
+		white-space: nowrap;
+		padding: 0 rem-calc(8);
+
+		@include media-breakpoint-down(sm) {
+			&--phone {
+				border-right: $footer-divider-border;
+			}
+		}
+
+		@include media-breakpoint-up(md) {
+			$padding: rem-calc(4);
+
+			&--phone {
+				padding-right: $padding;
+			}
+
+			&--fax {
+				padding-left: $padding;
+			}
+		}
+
+		@include media-breakpoint-up(lg) {
+			&--fax {
+				border-right: $footer-divider-border;
+			}
+		}
+	}
+}
+
+.Footer-links {
+	margin-bottom: 0;
+
+	@include media-breakpoint-up(md) {
+		display: inline;
+	}
+}
+
+.Footer-link {
+	padding-bottom: rem-calc(12);
+
+	&:last-child {
+		padding-bottom: 0;
+	}
+
+	@include media-breakpoint-up(md) {
+		padding: rem-calc(0 8);
+		border-right: $footer-divider-border;
+		display: inline;
+
+		&:last-child {
+			border-right: none;
+		}
+	}
+}

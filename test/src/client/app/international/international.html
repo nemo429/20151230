@@ -1,0 +1,27 @@
+<div class="Intl-DropDown">
+  <div class="spacer">
+    <!--<pre>{{intlSelect.lang | jsn}}</pre>-->
+    <div class="row">
+      <h6>LANGUAGE</h6>
+    </div>
+    <div class="row">
+      <select class="Dropdown dropper"
+              ng-model="intlSelect.lang"
+              ng-options="lang as lang.description for lang in opLanguages track by lang.languageCode">
+      </select>
+    </div>
+    <div class="row">
+      <h6>CURRENCY</h6>
+    </div>
+    <div class="row">
+      <select class="Dropdown dropper"
+              ng-model="intlSelect.curr"
+              ng-options="curr as curr for curr in opCurrencies track by curr">
+      </select>
+    </div>
+    <div class="row">
+      <button type="button" ng-click="toggleIntl()" class="btn btn-primary-outline">Cancel</button>
+      <button type="button" ng-click="changeIntl()" class="btn btn-primary">Update</button>
+    </div>
+  </div>
+</div>

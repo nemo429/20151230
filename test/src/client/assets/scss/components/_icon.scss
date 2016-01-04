@@ -1,0 +1,46 @@
+
+.Icon {
+  * {
+    transition: fill 0.3s ease, stroke 0.3s ease;
+    @include icon-color($body-color);
+  }
+
+  &--primary {
+    * {
+      @include icon-color($brand-primary);
+    }
+  }
+
+  &--secondary {
+    * {
+      @include icon-color($brand-secondary);
+    }
+  }
+
+  &--responsive {
+    @include icon-size(rem-calc(14));
+
+    @include media-breakpoint-up(md) {
+      @include icon-size($font-size-root);
+    }
+  }
+}
+
+img.Icon,
+img.js-svg-inject {
+  // Hide all icons until they get injected
+  display: none;
+}
+
+.Icon-property {
+  // Make sure filled and text elements only get fills
+  &--fill,
+  &--text {
+    stroke: none !important;
+  }
+
+  // Make sure stroked elements only get strokes
+  &--stroke {
+    fill: none !important;
+  }
+}

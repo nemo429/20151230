@@ -1,0 +1,7 @@
+<svg class="Icon" xmlns="http://www.w3.org/2000/svg" width="29.09" height="28" viewBox="0 0 29.09 28">
+  <g class="Icon-property--stroke" fill="none" stroke="#000" stroke-width="2" stroke-miterlimit="10">
+    <path class="Icon-property--stroke" d="M21.514 7.847c0 3.78-6.885 11.335-6.885 11.335S7.744 11.628 7.744 7.847 10.827 1 14.63 1c3.802 0 6.884 3.065 6.884 6.847z"/>
+    <ellipse class="Icon-property--stroke" cx="14.63" cy="7.847" rx="3.456" ry="3.438"/>
+    <path class="Icon-property--stroke" d="M17.126 16.384h6.387L27.63 27h-26l5.393-10.616h5.244"/>
+  </g>
+</svg>

@@ -1,0 +1,177 @@
+<div class="col-xs-12 col-lg-4 Checkout-column">
+  <form name="GuestsTotalForm" ng-submit="bookReservation()">
+    <section class="Checkout-section">
+      <h1 class="Section-displayTitle">Payment Method</h1>
+      <div class="Checkout-payment">
+        <div class="Checkout-payment-radios"><label class="Input"><input id="radio1" name="radio" checked="checked" type="radio">
+          <svg xmlns="http://www.w3.org/2000/svg"
+               xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+               class="Icon InputIndicator InputIndicator--circle injected-svg js-svg-inject" x="0px" y="0px" width="21px" height="21px"
+               viewBox="-0.5 -0.5 21 21" data-src="./assets/images/icons/radio.svg">
+            <title>Radio On</title>
+            <desc>Created with Sketch.</desc>
+            <g>
+              <ellipse class="Icon-property--stroke InputIndicator-outline" fill="none" stroke="#000" cx="10" cy="10" rx="10" ry="10"></ellipse>
+              <ellipse class="Icon-property--fill InputIndicator-on" fill="#000" stroke-miterlimit="10" cx="10" cy="10" rx="6" ry="6"></ellipse>
+            </g>
+          </svg>
+          Credit/Debit</label><label class="Input"><input id="radio2" name="radio" type="radio">
+          <svg xmlns="http://www.w3.org/2000/svg"
+               xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+               class="Icon InputIndicator InputIndicator--circle injected-svg js-svg-inject" x="0px" y="0px" width="21px" height="21px"
+               viewBox="-0.5 -0.5 21 21" data-src="./assets/images/icons/radio.svg">
+            <title>Radio On</title>
+            <desc>Created with Sketch.</desc>
+            <g>
+              <ellipse class="Icon-property--stroke InputIndicator-outline" fill="none" stroke="#000" cx="10" cy="10" rx="10" ry="10"></ellipse>
+              <ellipse class="Icon-property--fill InputIndicator-on" fill="#000" stroke-miterlimit="10" cx="10" cy="10" rx="6" ry="6"></ellipse>
+            </g>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="504.871" height="130.74" viewBox="0 0 504.871 130.74"
+               class="injected-svg js-svg-inject Checkout-paypal" data-src="./assets/images/global/paypal.svg">
+            <path
+              d="M478.197 19.193V4.003h-5.652V1.97h13.61v2.032h-5.667v15.19h-2.29zM488.414 19.193V1.97h3.39l4.108 12.19c.37 1.122.648 1.99.8 2.53.222-.62.53-1.543.94-2.752l4.16-11.967h3.06v17.224h-2.194v-14.4l-5.035 14.4h-2.06l-4.974-14.572v14.572h-2.196zM313.71 42.642c-4.286 3.115-10.24 4.687-17.933 4.687h-3.527c-3.064 0-4.996-2.44-4.305-5.415l4.266-18.457c.687-2.965 3.74-5.4 6.796-5.4h4.656c5.445 0 9.555.92 12.324 2.766 2.77 1.822 4.14 4.64 4.14 8.435 0 5.79-2.136 10.248-6.415 13.382zm30.698-28.427c-1.78-3.424-4.416-6.223-7.828-8.357-3.486-2.164-7.594-3.66-12.344-4.537C319.48.453 313.9 0 307.49 0h-29.674c-3.068 0-6.11 2.426-6.79 5.408l-20.07 86.953c-.694 2.98 1.25 5.41 4.29 5.41h14.246c3.06 0 6.11-2.43 6.81-5.41l4.872-21.072c.68-2.966 3.748-5.415 6.79-5.415h4.085c17.366 0 30.874-3.547 40.56-10.677 9.663-7.142 14.497-16.52 14.497-28.148 0-5.13-.892-9.392-2.7-12.833M387.834 78.56c-2.303 1.667-4.797 3.034-7.43 4.112-2.63 1.08-5.104 1.623-7.41 1.623-3.54 0-6.238-.514-8.09-1.556-1.842-1.012-2.773-2.788-2.773-5.32 0-2.873.685-5.196 2.105-6.947 1.38-1.736 3.422-3.09 6.05-4.05 2.58-.923 5.692-1.61 9.35-2.105 3.667-.473 7.593-.883 11.79-1.242l-3.59 15.485zm-4.46 19.21h17.872c3.05 0 6.117-2.43 6.8-5.41l10.36-44.767c.256-1.053.467-2.276.602-3.694.154-1.398.254-2.538.254-3.395 0-6.36-2.717-11.043-8.107-14.056-5.41-3.03-13.84-4.533-25.367-4.533-5.736 0-11.47.438-17.217 1.318-5.767.892-10.017 1.686-12.774 2.385l-2.408 12.207c-.588 2.992-.094 5.447 1.1 5.447 2.332-.862 5.844-1.95 10.52-3.272 4.705-1.315 8.982-1.98 12.844-1.98 5.717 0 10.006.616 12.88 1.838 2.87 1.24 4.32 3.377 4.32 6.418 0 .727-.095 1.408-.216 2.014-.152.593-.262 1.035-.312 1.3-8.137.48-15.71 1.224-22.72 2.235-6.966 1.003-12.987 2.648-18.048 4.924-5.387 2.426-9.46 5.644-12.21 9.702-2.74 4.06-4.122 8.99-4.122 14.818 0 5.52 1.938 10.018 5.807 13.448 3.868 3.442 8.872 5.155 14.974 5.155 3.8 0 6.768-.27 8.918-.8 2.137-.54 4.44-1.32 6.87-2.34 1.79-.794 3.75-1.89 5.847-3.273 2.083-1.37 3.89-2.565 5.37-3.542l-1.835 7.853M464.69.783l-20.29 91.59c-.686 2.977-3.764 5.417-6.81 5.417h-12.696c-3.047 0-4.996-2.44-4.3-5.416l19.048-86.187c.686-2.975 3.756-5.404 6.805-5.404h18.242M62.89 42.79c-4.28 3.124-10.235 4.702-17.925 4.702h-3.53c-3.06 0-4.99-2.444-4.32-5.42l4.282-18.458c.695-2.974 3.75-5.403 6.795-5.403h4.662c5.438 0 9.555.924 12.32 2.77 2.762 1.827 4.146 4.642 4.146 8.456 0 5.773-2.154 10.23-6.43 13.355zM93.59 14.37c-1.795-3.42-4.41-6.214-7.824-8.347C82.276 3.86 78.172 2.36 73.42 1.478 68.652.606 63.08.168 56.672.168H27.006c-3.064 0-6.113 2.415-6.81 5.4L.14 92.52c-.69 2.984 1.245 5.417 4.3 5.417h14.248c3.053 0 6.113-2.433 6.793-5.412l4.884-21.08c.69-2.965 3.74-5.4 6.8-5.4h4.065c17.366 0 30.88-3.556 40.556-10.692 9.672-7.126 14.512-16.508 14.512-28.147 0-5.12-.896-9.392-2.706-12.835M137.018 78.722c-2.32 1.665-4.8 3.036-7.428 4.112-2.645 1.08-5.098 1.617-7.426 1.617-3.516 0-6.215-.52-8.076-1.545-1.846-1.017-2.76-2.8-2.76-5.337 0-2.86.676-5.19 2.074-6.934 1.4-1.73 3.432-3.09 6.07-4.06 2.584-.906 5.695-1.614 9.352-2.095 3.666-.478 7.596-.892 11.77-1.24l-3.576 15.482zm-4.448 19.216h17.863c3.05 0 6.115-2.433 6.805-5.412l10.348-44.77c.27-1.06.486-2.278.605-3.69.16-1.397.25-2.534.25-3.396 0-6.362-2.712-11.04-8.106-14.06-5.39-3.032-13.85-4.535-25.377-4.535-5.723 0-11.457.44-17.203 1.325-5.783.887-10.035 1.684-12.764 2.382l-2.42 12.206c-.588 2.988-.094 5.447 1.104 5.447 2.342-.86 5.844-1.96 10.525-3.27 4.696-1.32 8.968-1.983 12.837-1.983 5.713 0 9.994.616 12.887 1.84 2.87 1.237 4.316 3.374 4.316 6.424 0 .728-.104 1.4-.215 1.996-.164.615-.27 1.045-.316 1.313-8.144.478-15.702 1.215-22.71 2.23-6.982 1.003-12.992 2.66-18.057 4.926-5.387 2.43-9.457 5.652-12.215 9.704-2.754 4.058-4.137 8.992-4.137 14.816 0 5.53 1.948 10.02 5.83 13.446 3.862 3.438 8.862 5.168 14.966 5.168 3.795 0 6.77-.284 8.916-.812 2.14-.546 4.436-1.31 6.865-2.344 1.795-.79 3.754-1.88 5.855-3.27 2.086-1.38 3.89-2.556 5.354-3.546l-1.806 7.866M240.762 21.974c-3.04 0-7.068 2.444-8.906 5.416l-25.14 43.083-6.894-43.014c-.686-2.986-3.748-5.422-6.803-5.422h-12.69c-3.06 0-5.002 2.436-4.3 5.42L187.02 98.5c.202 1.537.403 2.844.593 3.926l-13.688 22.9c-1.832 2.976-.852 5.414 2.213 5.414h14.717c3.06 0 7.05-2.438 8.893-5.414l61.297-103.353h-20.283z"></path>
+          </svg>
+        </label></div>
+        <div class="row">
+          <!--Card Number-->
+          <div class="col-xs-12">
+            <fieldset class="form-group">
+              <div class="Input Input--iconRight hidden-lg-up"><input type="text"
+                                                                      class="form-control form-control-lg form-control--custom js-input-cardnumber-mobile"
+                                                                      placeholder="Card Number"> <a href="javascript:void(0)">
+                <svg xmlns="http://www.w3.org/2000/svg" class="Icon injected-svg js-svg-inject" width="26.531" height="22.207"
+                     viewBox="0 0 26.531 22.207" data-src="./assets/images/icons/camera.svg">
+                  <g>
+                    <circle class="Icon-property--stroke" fill="none" cx="13" cy="13" r="3"></circle>
+                    <path class="Icon-property--fill"
+                          d="M2 22.207h22.53c1.105 0 2-.896 2-2V5.257c0-1.106-.895-2-2-2h-5.058l-1.668-2.4C17.43.32 16.818 0 16.164 0H9.918c-.71 0-1.37.377-1.727.992L6.87 3.256H2c-1.104 0-2 .895-2 2v14.95c0 1.105.896 2 2 2zm0-16.95h6.02L9.918 2h6.245l2.265 3.256h6.103v14.95H2V5.257z"></path>
+                    <path class="Icon-property--fill"
+                          d="M13 8c-2.762 0-5 2.238-5 5s2.238 5 5 5 5-2.238 5-5-2.238-5-5-5zm0 8c-1.654 0-3-1.346-3-3s1.346-3 3-3 3 1.346 3 3-1.345 3-3 3z"></path>
+                  </g>
+                </svg>
+              </a></div>
+              <input type="text"
+                     class="form-control form-control-lg form-control--custom js-input-cardnumber hidden-md-down"
+                     placeholder="Card Number"
+                     ng-model="guestProfile.guarantee.guaranteesAccepted[0].paymentCard.cardNumber"></fieldset>
+          </div>
+          <!--Card Number-->
+          <!-- MM/YYYY -->
+          <div class="col-xs-6">
+            <fieldset class="form-group"><input type="text"
+                                                class="form-control form-control-lg form-control--custom js-input-expiration"
+                                                placeholder="MM/YYYY"
+                                                ng-model="guestProfile.guarantee.guaranteesAccepted[0].paymentCard.expireDate"></fieldset>
+          </div>
+          <!-- MM/YYYY -->
+          <!-- CCV -->
+          <div class="col-xs-4">
+            <fieldset class="form-group"><input type="text"
+                                                class="form-control form-control-lg form-control--custom js-input-cvv"
+                                                placeholder="CCV"
+                                                ng-model="guestProfile.guarantee.guaranteesAccepted[0].paymentCard.seriesCode"></fieldset>
+          </div>
+          <!-- CCV -->
+          <!--Billing Address-->
+          <div class="col-xs-12">
+            <fieldset class="form-group">
+              <div class="Input Input--iconRight hidden-lg-up"><input type="text"
+                                                                      class="form-control form-control-lg form-control--custom"
+                                                                      placeholder="Billing Address">
+              </div>
+              <input type="text"
+                     class="form-control form-control-lg form-control--custom hidden-md-down"
+                     placeholder="Billing Address"
+                     ng-model="guestProfile.customer.address[1].addressLine1"></fieldset>
+          </div>
+          <!--Billing Address-->
+          <!--Billing Address Line 2-->
+          <div class="col-xs-12">
+            <fieldset class="form-group">
+              <div class="Input Input--iconRight hidden-lg-up"><input type="text"
+                                                                      class="form-control form-control-lg form-control--custom"
+                                                                      placeholder="Billing Address Line 2">
+                </a></div>
+              <input type="text"
+                     class="form-control form-control-lg form-control--custom hidden-md-down"
+                     placeholder="Billing Address Line 2"
+                     ng-model="guestProfile.customer.address[1].addressLine2"></fieldset>
+          </div>
+          <!--Billing Address Line 2-->
+          <!--City-->
+          <div class="col-xs-12">
+            <fieldset class="form-group">
+              <div class="Input Input--iconRight hidden-lg-up"><input type="text"
+                                                                      class="form-control form-control-lg form-control--custom"
+                                                                      placeholder="City">
+                </a></div>
+              <input type="text"
+                     class="form-control form-control-lg form-control--custom hidden-md-down"
+                     placeholder="City"
+                     ng-model="guestProfile.customer.address[1].cityName"></fieldset>
+          </div>
+          <!--City-->
+          <!--State-->
+          <div class="col-xs-6 Input Input--iconRight Checkout-dropdown">
+            <fieldset class="form-group">
+              <!--<input type="text"-->
+                     <!--class="form-control form-control-lg form-control&#45;&#45;custom"-->
+                     <!--placeholder="State"-->
+                     <!--ng-model="guestProfile.customer.address[1].stateCode">-->
+              <select title="State"
+                      ng-model="guestProfile.customer.address[1].stateCode"
+                      ng-options="state.key as state.value for state in stateCodes track by state.key">
+              </select>
+            </fieldset>
+          </div>
+          <!--State-->
+          <!--Postal Code-->
+          <div class="col-xs-6">
+            <fieldset class="form-group"><input type="text"
+                                                class="form-control form-control-lg form-control--custom"
+                                                placeholder="Postal Code"
+                                                ng-model="guestProfile.customer.address[1].postalCode"></fieldset>
+          </div>
+          <!--Postal Code-->
+        </div>
+        <!--Special Offers-->
+        <div class="InputGroup--stacked"><label class="Input">
+          <input type="checkbox" ng-model="guestProfile.shareAllMarketInd">
+          <svg xmlns="http://www.w3.org/2000/svg"
+               xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="Icon InputIndicator injected-svg js-svg-inject" x="0px" y="0px"
+               width="20px" height="20px" viewBox="0 0 20 20" data-src="./assets/images/icons/checkbox.svg">
+            <title>Checkbox Off Icon</title>
+            <desc>Created with Sketch.</desc>
+            <g>
+              <rect class="Icon-property--stroke InputIndicator-outline" y="0" fill="none" stroke="#000" stroke-width="1" width="20"
+                    height="20"></rect>
+              <path class="Icon-property--stroke InputIndicator-on" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" d="   M4,9.548l4.286,4.441L16,5.995"></path>
+            </g>
+          </svg>
+          I want to receive special offers by email.</label>
+          <!--Special Offers-->
+          <!--Terms and Conditions-->
+          <label class="Input">
+            <input class="js-input-terms" type="checkbox" required ng-model="confirmCheck">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="Icon InputIndicator injected-svg js-svg-inject" x="0px" y="0px"
+                 width="20px" height="20px" viewBox="0 0 20 20" data-src="./assets/images/icons/checkbox.svg">
+              <title>Checkbox Off Icon</title>
+              <desc>Created with Sketch.</desc>
+              <g>
+                <rect class="Icon-property--stroke InputIndicator-outline" y="0" fill="none" stroke="#000" stroke-width="1" width="20"
+                      height="20"></rect>
+                <path class="Icon-property--stroke InputIndicator-on" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" d="   M4,9.548l4.286,4.441L16,5.995"></path>
+              </g>
+            </svg>
+            I have read &amp; agree to the <a href="#">Terms &amp; Conditions</a></label></div>
+        <!--Terms and Conditions-->
+        <button class="js-book-button Checkout-submit btn btn-primary btn-block" type="submit">Book Now</button>
+      </div>
+    </section>
+  </form>
+</div>
+

@@ -1,0 +1,42 @@
+
+.AccommodationsGrid {
+
+}
+
+.AccommodationsGrid-category {
+  margin-bottom: rem-calc(20);
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: rem-calc(34);
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: rem-calc(14);
+  }
+}
+
+.AccommodationsGrid-category-title {
+  font-size: rem-calc(30);
+  font-weight: $text-light;
+  margin-bottom: rem-calc(20);
+  text-align: center;
+}
+
+.AccommodationsGrid-row {
+  margin-bottom: rem-calc(20);
+  transition: margin-bottom 0.4s 0.5s ease;
+
+  &.is-showing-details {
+    margin-bottom: 0;
+    transition-delay: 0s;
+  }
+}
+
+.AccommodationsGrid-roomDetail {
+  //z-index: -1;
+
+  &.collapsing {
+    transition-duration: 1s;
+    transition-timing-function: $easeInOutCubic;
+  }
+}

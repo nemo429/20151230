@@ -1,0 +1,22 @@
+<svg version="1.1" class="Icon" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="10px" height="6px"
+	 viewBox="0 0 10 6" enable-background="new 0 0 10 6" xml:space="preserve">
+<title>Chevron Up Icon</title>
+<desc>Created with Sketch.</desc>
+<g sketch:type="MSPage">
+	<g transform="translate(-95.000000, -236.000000)" sketch:type="MSArtboardGroup">
+		<g transform="translate(95.000000, 144.000000)" sketch:type="MSLayerGroup">
+			<g transform="translate(0.000000, 64.000000)" sketch:type="MSShapeGroup">
+				<g transform="translate(0.000000, 22.000000)">
+					<g transform="translate(5.000000, 9.000000) rotate(-180.000000) translate(-5.000000, -9.000000) translate(1.000000, 7.000000)">
+						<path class="Icon-property--stroke" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="
+						M4,3.829l4-3.536"/>
+						<path class="Icon-property--stroke" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="
+						M4,3.829L0,0.293"/>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

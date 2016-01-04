@@ -1,0 +1,15 @@
+
+a {
+  transition: color 0.3s ease;
+
+  .Icon * {
+    @include icon-color($link-color);
+  }
+
+  &:hover,
+  &:focus {
+    .Icon * {
+      @include icon-color($link-hover-color);
+    }
+  }
+}

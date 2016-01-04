@@ -1,0 +1,11 @@
+<svg version="1.1" class="Icon InputIndicator" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20px" height="20px"
+	 viewBox="0 0 20 20">
+<title>Checkbox Off Icon</title>
+<desc>Created with Sketch.</desc>
+<g>
+	<rect class="Icon-property--stroke InputIndicator-outline" y="0" fill="none" stroke="#000" stroke-width="1" width="20" height="20"/>
+	<path class="Icon-property--stroke InputIndicator-on" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="
+		M4,9.548l4.286,4.441L16,5.995"/>
+</g>
+</svg>

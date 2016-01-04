@@ -1,0 +1,21 @@
+<svg version="1.1" class="Icon" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="12px" height="12px" viewBox="0 0 12 12">
+<title>Add Icon</title>
+<desc>Created with Sketch.</desc>
+<g sketch:type="MSPage">
+	<g transform="translate(-1198.000000, -402.000000)" sketch:type="MSArtboardGroup">
+		<g transform="translate(911.000000, 204.000000)" sketch:type="MSLayerGroup">
+			<g transform="translate(43.000000, 102.000000)" sketch:type="MSShapeGroup">
+					<g transform="translate(0.000000, 82.000000)">
+					<g transform="translate(245.000000, 15.000000)">
+						<path class="Icon-property--stroke" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5,10
+							V0"/>
+						<path class="Icon-property--stroke" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M10,5
+							H0"/>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

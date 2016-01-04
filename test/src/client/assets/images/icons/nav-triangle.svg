@@ -1,0 +1,13 @@
+<svg version="1.1" class="Icon" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="36px" height="18px"
+	 viewBox="0 0 36 18">
+<title>Nav Triangle Icon</title>
+<desc>Created with Sketch.</desc>
+<g sketch:type="MSPage">
+	<g transform="translate(-810.000000, -72.000000)" sketch:type="MSArtboardGroup">
+		<g sketch:type="MSLayerGroup">
+			<path class="Icon-property--fill" sketch:type="MSShapeGroup" d="M810,90l18-18l18,18H810z"/>
+		</g>
+	</g>
+</g>
+</svg>

@@ -1,0 +1,64 @@
+
+.WelcomeBack {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  min-height: 100vh;
+
+  @include media-breakpoint-up(md) {
+    align-items: center;
+    margin-left: $grid-gutter-width / 2;
+    margin-right: $grid-gutter-width / 2;
+  }
+}
+
+.WelcomeBack-wrapper {
+  width: 100%;
+}
+
+.WelcomeBack-title {
+  color: white;
+  font-size: rem-calc(36);
+  font-weight: $text-light;
+  margin-bottom: rem-calc(40);
+
+  @include media-breakpoint-up(md) {
+    font-size: rem-calc(80);
+  }
+}
+
+.WelcomeBack-options {
+  background: white;
+
+  @include media-breakpoint-up(md) {
+    display: flex;
+    margin: 0 auto;
+    max-width: rem-calc(600);
+  }
+}
+
+.WelcomeBack-option {
+  padding: rem-calc(35 40);
+
+  &:first-child {
+    border-bottom: 1px solid #ccc;
+  }
+
+  @include media-breakpoint-up(md) {
+    flex: 1;
+
+    &--resume {
+      order: 2;
+    }
+
+    &--new {
+      order: 1;
+    }
+
+    &:first-child {
+      border-bottom: none;
+      border-left: 1px solid #ccc;
+    }
+  }
+}

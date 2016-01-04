@@ -1,0 +1,32 @@
+
+@mixin icon-color($color) {
+  fill: $color;
+  stroke: $color;
+}
+
+@mixin icon-size($size) {
+  width: $size;
+  height: $size;
+}
+
+@mixin icon-button-hover($color) {
+  &.is-active,
+  &:hover {
+    color: white;
+
+    .Icon * {
+      @include icon-color(white);
+    }
+  }
+
+  &.is-active {
+    background-color: $color;
+    border-color: $color;
+    cursor: pointer;
+  }
+
+  &:not(.is-active):hover {
+    background-color: darken($color, 10%);
+    border-color: darken($color, 10%);
+  }
+}

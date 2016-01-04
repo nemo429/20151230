@@ -1,0 +1,51 @@
+
+.Panel {
+  .panel-title {
+    font-size: rem-calc(16);
+    margin-bottom: 0;
+    padding-bottom: rem-calc(10);
+  }
+
+  &--link {
+    .Icon {
+      transition: transform 0.3s ease;
+      transform: rotate(180deg);
+    }
+
+    .collapsed {
+      .Icon {
+        transform: rotate(0);
+      }
+    }
+  }
+
+  &--secondary {
+    .panel-heading {
+      a {
+        color: $brand-secondary;
+      }
+
+      .Icon {
+        * {
+          @include icon-color($brand-secondary);
+        }
+      }
+
+      a:hover,
+      a:focus {
+        $color: darken($brand-secondary, 10%);
+        color: $color;
+        text-decoration: none;
+
+        * {
+          @include icon-color($color);
+        }
+      }
+    }
+  }
+}
+
+.Panel-collapse-content {
+  padding-bottom: rem-calc(10);
+  font-weight: 100;
+}

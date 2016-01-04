@@ -1,0 +1,122 @@
+//
+// Variables
+//
+// Use this for setting any global variables that are not Bootstrap related but
+// our own creation for specific modules.
+//
+
+$brand-secondary: #116eb5;
+
+// Easing
+//
+$easeInOutCubic: cubic-bezier(0.645, 0.045, 0.355, 1);
+
+// Text
+//
+$text-light: 300;
+$text-regular: 500;
+$text-bold: 700;
+
+// Button
+$button-disabled-color: #ccc !default;
+$button-disabled-bg-color: #f5f5f5 !default;
+$button-disabled-border-color: $button-disabled-color !default;
+
+// Calendar
+$calendar-border-color: #ccc;
+$calendar-selected-color: #fff;
+$calendar-selected-bg-color: $brand-secondary;
+$calendar-soldout-color: #999;
+$calendar-soldout-bg-color: #ccc;
+
+// Footer
+//
+$footer-divider-border: 1px solid #ddd;
+
+// Header
+//
+$header-color: #fff;
+$header-bg-color: $brand-secondary;
+$header-bg-color-active: #4d92c8;
+$header-bg-color-hover: darken($header-bg-color, 5%);
+$header-bg-color-focus: darken($header-bg-color, 15%);
+$header-logo-bg-color: $header-bg-color;
+$header-border-color: rgba(255, 255, 255, 0.2);
+
+$header-button-icon-color: $header-color;
+$header-button-arrow-color: #F5F5F5;
+
+$header-notification-bg-color: $header-bg-color-active;
+
+// IconLabel
+$iconlabel-margin-x: rem-calc(10);
+$iconlabel-margin-y: rem-calc(12);
+
+// Paragraph
+$paragraph-font-weight: $text-light;
+
+// Border
+$border-dotted: rem-calc(1) dotted #999;
+
+// Form
+$form-control-font-weight: $text-light;
+$form-control-filled-bg-color: transparent;
+
+// // Select
+// // // control options
+// // $select-input-bg:                  #fff !default;
+// // $select-input-bg-disabled:         #f9f9f9 !default;
+// // $select-input-border-color:        #ccc !default;
+// $select-input-border-radius:       0;
+// $select-input-border-focus:        $brand-secondary;
+// // $select-input-border-width:        1px !default;
+// $select-input-height:              40px;
+// // $select-input-internal-height:     ($select-input-height - ($select-input-border-width * 2)) !default;
+// // $select-input-placeholder:         #aaa !default;
+// $select-text-color:                #444; // TODO: have access to Bootstrap vars yet. Probably should combine
+// // $select-link-hover-color:          $select-input-border-focus !default;
+// //
+// // $select-padding-vertical:          8px !default;
+// // $select-padding-horizontal:        10px !default;
+// //
+// // // menu options
+// // $select-menu-zindex:               1000 !default;
+// // $select-menu-max-height:           200px !default;
+// //
+// $select-option-color:              $select-text-color;
+// // $select-option-focused-color:      $select-text-color !default;
+// $select-option-focused-bg:         rgba($brand-secondary, 0.05); // pale blue
+// // $select-option-disabled-color:     lighten($select-text-color, 60%) !default;
+// //
+// // $select-noresults-color:           lighten($select-text-color, 40%) !default;
+// //
+// // // clear "x" button
+// // $select-clear-size:                floor(($select-input-height / 2)) !default;
+// // $select-clear-color:               #999 !default;
+// // $select-clear-hover-color:         #D0021B !default; // red
+// // $select-clear-width:               ($select-input-internal-height / 2) !default;
+// //
+// // // arrow indicator
+// // $select-arrow-color:               #999 !default;
+// // $select-arrow-color-hover:         #666 !default;
+// // $select-arrow-width:               5px !default;
+// //
+// // // loading indicator
+// // $select-loading-size:              16px !default;
+// // $select-loading-color:             $select-text-color !default;
+// // $select-loading-color-bg:          $select-input-border-color !default;
+// //
+// // // multi-select item
+// // $select-item-border-radius:        2px !default;
+// // $select-item-gutter:               5px !default;
+// // $select-item-padding-vertical:     2px !default;
+// // $select-item-padding-horizontal:   5px !default;
+// // $select-item-font-size:            .9em !default;
+// // $select-item-color:                #08c !default; // pale blue
+// // $select-item-bg:                   #f2f9fc !default;
+// // $select-item-border-color:         darken($select-item-bg, 10%) !default;
+// // $select-item-hover-color:          darken($select-item-color, 5%) !default; // pale blue
+// // $select-item-hover-bg:             darken($select-item-bg, 5%) !default;
+// // $select-item-disabled-color:       #333 !default;
+// // $select-item-disabled-bg:          #fcfcfc !default;
+// // $select-item-disabled-border-color: darken($select-item-disabled-bg, 10%) !default;

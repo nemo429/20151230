@@ -1,0 +1,47 @@
+<div class="AccommodationsList-card">
+  <div class="CardList">
+    <div class="CardList-wrapper">
+      <div class="CardList-media"><img class="CardList-media-image img-responsive"
+                                       ng-src="{{package.image.imageSource | imageUrlFilter}}"
+                                       alt="{{package.packageName}}"><span
+        class="label label-info CardList-label">{{package.packageTag}}</span>
+        <div class="CardList-actions">
+          <div class="CardList-price">
+            <div class="CardList-price-surtitle">From</div>
+            <div class="CardList-price-title">${{package.lowestRate}}</div>
+          </div>
+          <button class="btn btn-primary CardList-action" type="button" name="button">Book</button>
+        </div>
+      </div>
+      <div class="CardList-summary"><h3 class="CardList-summary-title"
+      >{{package.packageName}}</h3>
+        <p class="CardList-summary-description">{{package.description}}</p>
+
+        <!--List of Features of Accommodation/Package-->
+        <ul class="CardList-summary-offerings list-unstyled">
+          <li class="CardList-summary-offering IconLabel IconLabel--stacked"
+              ng-repeat="service in package.serviceRPHs">
+            <span class="SVGIcon IconLabel-icon">
+              <div class="Icon">
+                <img ng-src="{{service.rph | packageFeaturesImage: packageServices}}">
+              </div>
+
+            <div class="IconLabel-label">{{ service.rph | packageFeatures: packageServices }}</div>
+            </span>
+          </li>
+        </ul>
+        <!--List of Features of Accommodation/Package-->
+        <div class="CardList-actions">
+          <div class="CardList-price">
+            <div class="CardList-price-surtitle">From</div>
+            <div class="CardList-price-title">${{package.lowestRate}}</div>
+          </div>
+          <button class="btn btn-primary CardList-action"
+                  type="button" name="button"
+                  ng-click="setPackage(package);">Select
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

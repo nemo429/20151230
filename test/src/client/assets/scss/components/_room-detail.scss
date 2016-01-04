@@ -1,0 +1,213 @@
+
+.RoomDetail {
+  font-size: rem-calc(16);
+  padding-top: rem-calc(20);
+  background-color: white;
+  position: relative;
+
+  &--inline {
+    padding-bottom: rem-calc(28);
+    margin-bottom: rem-calc(60);
+  }
+
+  @include media-breakpoint-up(sm) {
+    padding-top: rem-calc(50);
+  }
+
+  .Section-hr {
+    @include media-breakpoint-down(sm) {
+      margin-left: -$grid-gutter-width / 2;
+      margin-right: -$grid-gutter-width / 2;
+    }
+  }
+}
+
+.RoomDetail-close {
+  z-index: 1;
+  display: flex;
+  justify-content: flex-end;
+  position: sticky;
+  top: 82px;
+
+  @include media-breakpoint-up(md) {
+    top: 102px;
+  }
+
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+  }
+
+  &--aside {
+    margin-bottom: rem-calc(20);
+  }
+}
+
+.RoomDetail-close-button {
+  background-color: rgba(white, 0.9);
+  line-height: 0;
+  padding: rem-calc(5);
+  cursor: pointer;
+
+  .Icon {
+    @include icon-size(rem-calc(24));
+
+    * {
+      @include icon-color($body-color);
+    }
+  }
+}
+
+.RoomDetail-title {
+  font-size: rem-calc(24);
+  font-weight: 100;
+  color: $brand-secondary;
+
+  @include media-breakpoint-up(md) {
+    font-size: rem-calc(36);
+  }
+}
+
+.RoomDetail-description {
+  @include media-breakpoint-up(md) {
+    margin-bottom: rem-calc(30);
+  }
+}
+
+.RoomDetail-offerings {
+  margin-bottom: rem-calc(17);
+  font-size: rem-calc(16);
+  font-weight: 100;
+}
+
+.RoomDetail-carousel {
+  @include media-breakpoint-down(sm) {
+    margin-left: -$grid-gutter-width / 2;
+    margin-right: -$grid-gutter-width / 2;
+  }
+}
+
+.RoomDetail-amenities {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: rem-calc(-12);
+}
+
+.RoomDetail-amenity {
+  @include media-breakpoint-down(sm) {
+    &.IconLabel {
+      text-align: left;
+      display: flex;
+
+      &--stacked {
+        // Overriding for custom inline layout for small
+        .Icon {
+          margin-right: $iconlabel-margin-x;
+        }
+      }
+    }
+  }
+
+  .Icon {
+    @include media-breakpoint-up(md) {
+      @include icon-size(rem-calc(60));
+    }
+  }
+}
+
+.RoomDetail-pricingAside {
+  margin-bottom: rem-calc(44);
+
+  @include media-breakpoint-only(xs) {
+    padding: 0;
+  }
+
+  @include media-breakpoint-up(sm) {
+    margin-bottom: rem-calc(58);
+  }
+}
+
+.RoomDetail-pricingBox {
+  @include media-breakpoint-up(lg) {
+    &.sticky {
+      position: sticky;
+      top: 102px;
+
+      &:before,
+      &:after {
+        content: '';
+        display: table;
+      }
+    }
+  }
+}
+
+.RoomDetail-bookNow {
+  @include media-breakpoint-down(md) {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+  }
+}
+
+.RoomDetails-upgrade {
+  background-color: $body-bg;
+  padding: rem-calc(32 0 117 0);
+
+  .CardGrid {
+    margin-bottom: rem-calc(10);
+  }
+}
+
+.RoomDetails-upgrade-title {
+  font-size: rem-calc(32);
+  text-align: center;
+  font-weight: 100;
+  margin-bottom: rem-calc(34);
+}
+
+.RoomDetail-enhancement {
+  + .RoomDetail-enhancement {
+    margin-top: rem-calc(36);
+  }
+}
+
+.RoomDetail-dropdowns {
+  margin-top: rem-calc(20);
+  display: flex;
+}
+
+// Override/hardcode this since we don't have a dropdown built
+.RoomDetail-checkout {
+  max-width: rem-calc(110);
+
+  &--guests {
+    max-width: rem-calc(120);
+  }
+
+  &.Input--iconRight .form-control {
+    padding-left: rem-calc(20);
+    padding-right: rem-calc(38);
+  }
+
+  input {
+    font-size: rem-calc(14);
+    font-weight: $text-regular;
+  }
+
+  svg.Icon {
+    top: 12px;
+    @include icon-size(rem-calc(12));
+
+    * {
+      @include icon-color($body-color);
+    }
+  }
+
+  + .RoomDetail-checkout {
+    margin-left: rem-calc(20);
+  }
+}

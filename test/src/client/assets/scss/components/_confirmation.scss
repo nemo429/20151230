@@ -1,0 +1,149 @@
+$column-extra-padding: rem-calc(35);
+
+.Confirmation {
+	// Root parent component
+}
+
+.Confirmation-pageTitle {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	flex-wrap: wrap;
+
+	> * {
+		flex: none;
+	}
+}
+
+.Confirmation-column {
+	margin-bottom: rem-calc(40);
+	padding-bottom: rem-calc(40);
+	border-bottom: $border-dotted;
+
+	&:last-child {
+		border-bottom: none;
+		padding-bottom: 0;
+	}
+
+	@include media-breakpoint-up(lg) {
+		padding-bottom: 0;
+		border-bottom: none;
+
+		&--reservation {
+			border-right: $border-dotted;
+
+			.Confirmation-section {
+				padding-right: $column-extra-padding;
+			}
+		}
+
+		&--enhancement {
+			.Confirmation-section {
+				padding-left: $column-extra-padding;
+			}
+		}
+
+		&--location {
+			.Confirmation-section {
+				border-top: $border-dotted;
+				padding-top: rem-calc(60);
+			}
+		}
+	}
+}
+
+.Confirmation-subSection {
+	+ .Confirmation-subSection {
+		margin-top: rem-calc(40);
+	}
+}
+
+.Confirmation-number {
+	margin-bottom: rem-calc(10);
+	padding-bottom: rem-calc(10);
+	border-bottom: $border-dotted;
+}
+
+.Confirmation-title {
+	&--enhance {
+		&.Section-displayTitle {
+			@include media-breakpoint-only(md) {
+				text-align: center;
+				font-size: rem-calc(30);
+				margin-bottom: rem-calc(35);
+			}
+		}
+	}
+}
+
+.Confirmation-enhancement {
+	+ .Confirmation-enhancement {
+		margin-top: rem-calc(40);
+	}
+}
+
+.Confirmation-enhancement-image {
+	object-fit: cover;
+	width: 100%;
+
+	@include media-breakpoint-only(xs) {
+		padding-left: 0;
+		padding-right: 0;
+    margin-bottom: rem-calc(10);
+	}
+}
+
+.Confirmation-enhancement-btn {
+	margin-top: rem-calc(20);
+	text-align: center;
+
+	@include media-breakpoint-up(md) {
+		margin-top: rem-calc(40);
+	}
+}
+
+.Confirmation-travel {
+	margin: rem-calc(16 0);
+	padding: rem-calc(16 0);
+	border-top: $border-dotted;
+	border-bottom: $border-dotted;
+}
+
+.Confirmation-travel-table {
+	td {
+		padding-right: rem-calc(20);
+
+		&:last-child {
+			padding-right: 0;
+		}
+	}
+}
+
+.Confirmation-address {
+	margin: 0;
+}
+
+.Confirmation-location-details {
+	@include media-breakpoint-up(lg) {
+		padding-right: $column-extra-padding;
+	}
+}
+
+.Confirmation-map {
+	@include media-breakpoint-only(md) {
+		display: flex;
+	}
+}
+
+.Confirmation-map-image {
+	width: 100%;
+
+	@include media-breakpoint-only(md) {
+		object-fit: cover;
+		object-position: 0;
+	}
+
+	@include media-breakpoint-up(lg) {
+		padding-left: $column-extra-padding;
+	}
+}

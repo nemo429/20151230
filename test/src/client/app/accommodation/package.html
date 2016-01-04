@@ -1,0 +1,12 @@
+<div class="AccommodationsGrid" ng-show="toggleAcc.gridView">
+  <div class="container-fluid Site-container">
+    <div class="AccommodationsGrid-row row">
+      <accommodation-grid-package ng-repeat="package in allPackages"></accommodation-grid-package>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid Site-container" ng-show="toggleAcc.listView">
+  <accommodation-list-package ng-repeat="package in allPackages"
+                              class="AccommodationsGrid-category"></accommodation-list-package>
+</div>

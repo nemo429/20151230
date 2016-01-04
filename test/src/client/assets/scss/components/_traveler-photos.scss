@@ -1,0 +1,64 @@
+
+.TravelerPhotos {
+
+}
+
+.TravelerPhotos-title {
+  font-size: rem-calc(16);
+  text-transform: uppercase;
+}
+
+
+.TravelerPhotos-grid {
+  @include media-breakpoint-down(sm) {
+    overflow-x: scroll;
+    margin-left: -$grid-gutter-width / 2;
+    margin-right: -$grid-gutter-width / 2;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+.TravelerPhotos-grid-items {
+  display: flex;
+
+  @include media-breakpoint-down(sm) {
+    width: 570px;
+    margin-left: $grid-gutter-width / 2;
+    margin-right: $grid-gutter-width / 2;
+  }
+
+  @include media-breakpoint-up(md) {
+    flex-wrap: wrap;
+  }
+}
+
+.TravelerPhotos-grid-item {
+  @include media-breakpoint-down(sm) {
+    width: 138px;
+    height: 138px;
+    margin-right: rem-calc(1);
+    flex: none;
+  }
+
+  @include media-breakpoint-up(md) {
+    flex: 0 0 50%;
+    padding-bottom: rem-calc(20);
+
+    &:nth-child(2n) {
+      padding-left: rem-calc(10);
+    }
+
+    &:nth-child(2n+1) {
+      padding-right: rem-calc(10);
+    }
+
+    img {
+      width: 100%;
+      max-width: initial;
+    }
+  }
+}
+
+
+//toaster added
+

@@ -1,0 +1,93 @@
+
+.Dates {
+  margin-bottom: rem-calc(60);
+
+  @include media-breakpoint-up(md) {
+    .Calendar-header-button {
+      display: none;
+    }
+  }
+}
+
+.Dates-header {
+  margin-bottom: rem-calc(20);
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: rem-calc(40);
+  }
+}
+
+.Dates-code {
+  @include media-breakpoint-down(sm) {
+    text-align: center;
+    margin-bottom: rem-calc(10);
+  }
+}
+
+.Dates-title {
+  font-size: rem-calc(36);
+  font-weight: $text-light;
+  margin-bottom: 0;
+}
+
+.Dates-calendar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: rem-calc(20);
+
+  @include media-breakpoint-up(md) {
+    margin-bottom: rem-calc(40);
+  }
+}
+
+.Dates-calendar-button {
+
+  @include media-breakpoint-down(sm) {
+    display: none;
+  }
+
+  &--prev {
+    order: -1;
+  }
+
+  &--next {
+    order: 1;
+  }
+}
+
+.Dates-calendar-component {
+  flex: 1;
+  max-width: rem-calc(855);
+
+  @include media-breakpoint-up(md) {
+    margin: rem-calc(0 20);
+  }
+}
+
+.Dates-ctas {
+  @include media-breakpoint-up(sm) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.Dates-cta {
+  @include media-breakpoint-down(xs) {
+    display: block;
+
+    + .Dates-cta {
+      margin-top: rem-calc(10);
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    &--update {
+      order: 1;
+    }
+
+    + .Dates-cta {
+      margin-right: rem-calc(20);
+    }
+  }
+}

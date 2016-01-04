@@ -1,0 +1,102 @@
+<div class="col-xs-12 col-lg-4 Checkout-column">
+  <!-- Package Title or just Room-->
+  <section class="Checkout-section">
+    <h1 class="Section-displayTitle">Your Reservation</h1>
+    <h6>{{totalData.packageTitle}}:</h6>
+
+    <!-- Rooms Detail -->
+    <total-room-detail ng-repeat="roomInfo in totalData.roomData track by $index">
+    </total-room-detail>
+
+    <!-- Subtotal Table -->
+    <table class="Table">
+      <tbody>
+      <tr>
+        <td>Subtotal</td>
+        <td class="text-right">${{totalData.subtotal}}</td>
+      </tr>
+      </tbody>
+    </table>
+    <!--Discount Table-->
+    <div class="Receipt-footer" style="border-bottom: 0px solid crimson;"></div>
+    <div style="float:left;" class="Checkout-requests">
+      <div class="Input Input--iconRight Checkout-dropdown">
+
+
+        <input type="text"
+               class="form-control form-control-lg form-control--custom js-input-firstname"
+               value="Discount Code"
+               disabled="disabled">
+
+        <svg xmlns="http://www.w3.org/2000/svg"
+             xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="Icon injected-svg js-svg-inject" x="0px" y="0px" width="13px"
+             height="9px" viewBox="0 0 13 9" data-src="./assets/images/icons/chevron-down.svg">
+          <title>Chevron Down Icon</title>
+          <desc>Created with Sketch.</desc>
+          <g type="MSPage">
+            <g transform="translate(-809.000000, -509.000000)" type="MSArtboardGroup">
+              <g transform="translate(522.000000, 144.000000)" type="MSLayerGroup">
+                <g transform="translate(0.000000, 64.000000)" type="MSShapeGroup">
+                  <g transform="translate(0.000000, 280.000000)">
+                    <path class="Icon-property--stroke" fill="none" stroke="#000" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round" d="       M298.5,22l-5.25,6.223L288,22"></path>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </svg>
+
+
+      </div>
+      <div>
+        <input type="text"
+               class="form-control form-control-lg form-control--custom js-input-firstname"
+               value="FallSpecial2015">
+      </div>
+
+    </div>
+    <div class="col-xs-4 col-lg-4 text-right">
+      {{totalData.code.discount}}
+    </div>
+    <div class="col-xs-12">
+      <button class="Dates-cta Dates-cta--back btn btn-primary btn-primary-outline">Cancel</button>
+      <span class="separator">&nbsp;</span>
+      <button class="btn btn-primary CardGrid-action" type="button" name="button">Add</button>
+    </div>
+
+
+    <div class="Receipt-footer">
+      <!--Total Table-->
+      <table class="Table">
+        <tbody>
+        <tr>
+          <td>Taxes</td>
+          <td class="text-right">${{totalData.taxes}}</td>
+        </tr>
+        <tr>
+          <td>Resort Fees</td>
+          <td class="text-right">${{totalData.resortFees}}</td>
+        </tr>
+        <tr>
+          <td><b>Total</b></td>
+          <td class="text-right"><b>${{totalData.total}}</b></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--Requests and Stuff-->
+    <div class="Checkout-requests">
+      <div class="Input" style="margin-bottom: 5px;" ng-repeat="box in specialRequests track by $index">
+        <select title="Special Request"
+                ng-model="guestProfile.specialRequests[$index]"
+                ng-options="request.key as request.value for request in requestCodes track by request.key">
+        </select>
+      </div>
+        <button class="Dates-cta Dates-cta--back btn btn-primary btn-primary-outline">Cancel</button>
+        <span class="separator">&nbsp;</span>
+        <button class="btn btn-primary CardGrid-action" type="button" name="button" ng-click="incrementRequest()">Add</button>
+    </div>
+  </section>
+  <!-- Package Section End -->
+</div>

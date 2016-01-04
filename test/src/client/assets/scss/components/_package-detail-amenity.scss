@@ -1,0 +1,56 @@
+
+.PackageDetailAmenity {
+  padding: rem-calc(24 0);
+  border-bottom: 1px dotted #999;
+
+  &:last-child {
+    border-bottom: transparent;
+  }
+}
+
+.PackageDetailAmenity-title {
+  color: $brand-secondary;
+  font-size: rem-calc(24);
+  font-weight: $text-light;
+}
+
+.PackageDetailAmenity-icon {
+  text-align: center;
+
+  .Icon * {
+    @include icon-color($brand-secondary);
+  }
+}
+
+.PackageDetailAmenity-summary {
+  font-size: rem-calc(14);
+}
+
+.PackageDetailAmenity-travel {
+  display: flex;
+
+  .IconLabel {
+    margin-left: rem-calc(40);
+    font-size: rem-calc(12);
+
+    @include media-breakpoint-up(md) {
+      font-size: rem-calc(14);
+    }
+  }
+}
+
+.PackageDetailAmenity-travel-label {
+  font-size: rem-calc(12);
+  text-transform: uppercase;
+  margin-top: rem-calc(2);
+
+  @include media-breakpoint-down(sm) {
+    margin-bottom: rem-calc(10);
+  }
+}
+
+.PackageDetailAmenity-travel-distance {
+  @include media-breakpoint-down(sm) {
+    margin-left: rem-calc(10);
+  }
+}

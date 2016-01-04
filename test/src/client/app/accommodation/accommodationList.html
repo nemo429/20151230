@@ -1,0 +1,45 @@
+<div class="AccommodationsList-card" ng-click="toggleRoomDetail(gridRow, room);" ng-class="{'is-showing-details': room.isSelected}">
+  <div class="CardList" ng-class="{'is-selected': room.isSelected}">
+    <div class="CardList-wrapper">
+      <div class="CardList-media"><img class="CardList-media-image img-responsive"
+                                       ng-src="{{room.images[0].imageSource}}"
+                                       alt="City Adventure Package"><span
+        class="label label-info CardList-label">{{room.roomTag}}</span>
+        <div class="CardList-actions">
+          <div class="CardList-price">
+            <div class="CardList-price-surtitle">From</div>
+            <div class="CardList-price-title">${{room.averageRate}}</div>
+          </div>
+          <button class="btn btn-primary CardList-action" type="button" name="button">Book</button>
+        </div>
+      </div>
+      <div class="CardList-summary"><h3 class="CardList-summary-title"
+      >{{room.roomTypeName}}</h3>
+        <p class="CardList-summary-description">{{room.description}}</p>
+
+        <!--List of Features of Accommodation/Package-->
+        <ul class="CardList-summary-offerings list-unstyled">
+          <li class="CardList-summary-offering IconLabel IconLabel--stacked" ng-repeat="amenity in room.amenities">
+            <span class="SVGIcon IconLabel-icon">
+              <div class="Icon">
+                <img height="44px" width="44px" ng-src="{{amenity.image.imageSource | imageUrlFilter}}">
+              </div>
+
+            <div class="IconLabel-label">{{amenity.roomFeature}}</div>
+            </span>
+          </li>
+        </ul>
+        <!--List of Features of Accommodation/Package-->
+        <div class="CardList-actions">
+          <div class="CardList-price">
+            <div class="CardList-price-surtitle">From</div>
+            <div class="CardList-price-title">${{room.averageRate}}</div>
+          </div>
+          <button class="btn btn-primary CardList-action" type="button" name="button"
+                  ng-click="updateAccommodations(room); closeRoomDetail(currentRoom); $event.stopPropagation();">Book
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

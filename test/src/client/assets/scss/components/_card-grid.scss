@@ -1,0 +1,167 @@
+$card-transition-delay: 0.6s;
+
+.CardGrid {
+  position: relative;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  $arrowSize: 20px;
+  $borderSize: 5px;
+
+  &:before {
+    position: absolute;
+    bottom: -$arrowSize + $borderSize;
+    left: 50%;
+    right: 50%;
+    width: 0;
+    height: 0;
+    display: block;
+    content: "";
+    border-color: transparent;
+    border-style: solid solid outset;
+    pointer-events: none;
+    transform: translate(-50%, 0);
+    border-top-color: $brand-secondary;
+    border-width: $arrowSize;
+    transition: transform 0.3s $card-transition-delay - 0.2s ease;
+  }
+
+  &.is-selected {
+    z-index: 5;
+
+    &:before {
+      transform: translate(-50%, $arrowSize + $borderSize);
+      transition-delay: 0.2s;
+    }
+
+    .CardGrid-wrapper {
+      border-color: $brand-secondary;
+      transition-delay: 0s, 0s;
+    }
+
+    .CardGrid-summary {
+      background-color: $brand-secondary;
+      color: white;
+      padding-bottom: rem-calc(30);
+      transition-delay: 0s, 0s, 0s;
+    }
+
+    .CardGrid-summary-title {
+      color: white;
+      transition-delay: 0s, 0s;
+
+      a {
+        color: white;
+        transition-delay: 0s, 0s;
+
+        &:hover {
+          color: white;
+          cursor: text;
+          text-decoration: none;
+        }
+      }
+    }
+
+    .Icon {
+      * {
+        @include icon-color(white);
+        transition-delay: 0s, 0s;
+      }
+    }
+  }
+}
+
+.CardGrid-wrapper {
+  border: rem-calc(5) solid transparent;
+  margin: rem-calc(-5 -5 0 -5);
+  position: relative;
+  z-index: 1;
+  transition: border 0.3s $card-transition-delay ease;
+}
+
+.CardGrid-media {
+  position: relative;
+}
+
+.CardGrid-media-image {
+  width: 100%;
+  cursor: pointer;
+}
+
+.CardGrid-label {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: rem-calc(12);
+}
+
+.CardGrid-actions {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  max-height: rem-calc(50);
+}
+
+.CardGrid-price {
+  background-color: rgba($body-color, 0.9);
+  color: white;
+  display: inline-block;
+  font-size: rem-calc(24);
+  font-weight: $text-light;
+  padding: rem-calc(6 20);
+  text-align: center;
+
+  &-title {
+    line-height: 1;
+  }
+
+  &-subtitle {
+    text-transform: uppercase;
+    opacity: 0.5;
+    font-size: rem-calc(10);
+  }
+}
+
+.CardGrid-summary {
+  background-color: white;
+  padding: rem-calc(15);
+  transition: background-color 0.3s $card-transition-delay ease, color 0.3s $card-transition-delay ease, padding-bottom 0.3s $card-transition-delay ease;
+}
+
+.CardGrid-summary-title {
+  color: $brand-primary;
+  font-size: rem-calc(18);
+  cursor: pointer;
+  transition: color 0.3s $card-transition-delay ease;
+
+  a {
+    transition: color 0.3s $card-transition-delay ease;
+  }
+}
+
+.CardGrid-summary-offerings {
+  margin-bottom: 0;
+}
+
+.CardGrid-summary-offering {
+  display: inline-flex;
+  margin-right: rem-calc(25);
+  font-size: rem-calc(14);
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @include media-breakpoint-up(md) {
+    margin-right: rem-calc(18);
+  }
+
+  .Icon {
+    @include icon-size(rem-calc(17));
+    align-self: center;
+    margin-right: rem-calc(6);
+
+    * {
+      transition: fill 0.3s $card-transition-delay ease, stroke 0.3s $card-transition-delay ease;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+<svg version="1.1" class="Icon" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22px" height="20px"
+	 viewBox="0 0 22 20">
+<title>Calendar Icon</title>
+<desc>Created with Sketch.</desc>
+<g sketch:type="MSPage">
+	<g transform="translate(-1061.000000, -338.000000)" sketch:type="MSArtboardGroup">
+		<g transform="translate(911.000000, 204.000000)" sketch:type="MSLayerGroup">
+			<g transform="translate(43.000000, 102.000000)" sketch:type="MSShapeGroup">
+				<g>
+					<g transform="translate(107.000000, 32.000000)">
+						<rect class="Icon-property--fill" x="3" y="4" width="1" height="16"/>
+						<rect class="Icon-property--fill" x="6" y="4" width="1" height="16"/>
+						<rect class="Icon-property--fill" x="9" y="4" width="1" height="16"/>
+						<rect class="Icon-property--fill" x="21" y="4" width="1" height="16"/>
+						<rect class="Icon-property--fill" x="18" y="4" width="1" height="16"/>
+						<rect class="Icon-property--fill" x="12" y="4" width="1" height="16"/>
+						<rect class="Icon-property--fill" x="15" y="4" width="1" height="16"/>
+						<rect class="Icon-property--fill" y="4" width="1" height="16"/>
+						<rect class="Icon-property--fill" width="22" height="4"/>
+						<rect class="Icon-property--fill" y="7" width="22" height="1"/>
+						<rect class="Icon-property--fill" y="11" width="22" height="1"/>
+						<rect class="Icon-property--fill" y="15" width="22" height="1"/>
+						<rect class="Icon-property--fill" y="19" width="22" height="1"/>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

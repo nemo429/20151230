@@ -1,0 +1,16 @@
+<svg version="1.1" class="Icon" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="28px" height="24px"
+	 viewBox="0 0 28 24">
+<title>Measuring Square</title>
+<desc>Created with Sketch.</desc>
+<g sketch:type="MSPage">
+	<g transform="translate(-505.000000, -335.000000)" sketch:type="MSArtboardGroup">
+		<g transform="translate(180.000000, 140.000000)" sketch:type="MSLayerGroup">
+			<g transform="translate(3.000000, 104.000000)" sketch:type="MSShapeGroup">
+				<path class="Icon-property--stroke" fill="none"  stroke="#116eb5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="
+					M323,113.363h25.449V92L323,113.363L323,113.363z M335.928,108.769h7.789v-6.646L335.928,108.769L335.928,108.769z"/>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

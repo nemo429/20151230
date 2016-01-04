@@ -1,0 +1,45 @@
+<div class="container-fluid Site-container Site-pageWrapper AccommodationsList" style="display:flex;justify-content:center;">
+
+    <form novalidate name="GuestsAndRoomsForm"  ng-submit="updateGuests()">
+        <h1>Guests & Rooms</h1>
+        <div class="row">
+            <select title="Number of Adults"
+                    ng-init="initOptions.Adults = guests.defaultAdults"
+                    ng-model="initOptions.Adults"
+                    ng-options="(guest | adultsFilter) for guest in (guests.maxAdults | limitTo: HotelDescriptiveInfo.maxAdults: 1)">
+            </select>
+            <select title="Number of Children"
+                    ng-init="initOptions.Children = guests.defaultChildren"
+                    ng-model="initOptions.Children"
+                    ng-options="(guest | childrenFilter) for guest in guests.maxChildren"
+                    ng-disabled="!HotelDescriptiveInfo.allowChildren"
+                    ng-change="updateChildArr()">
+            </select>
+            <select title="Number of Rooms"
+                    ng-init="initOptions.Rooms = guests.maxRooms[HotelDescriptiveInfo.defaultRooms]"
+                    ng-model="initOptions.Rooms"
+                    ng-options="(room | roomsFilter) for room in (guests.maxRooms | limitTo: HotelDescriptiveInfo.maxRoomsPerBooking : 1)">
+            </select>
+        </div>
+        <!--ng-repeat rows by number of children which updates on selection of "number of children"-->
+        <div ng-repeat="children in numToArray(initOptions.Children) track by $index">
+            Age of Child {{$index + 1}}
+
+
+            Children:{{children}}
+
+            <select title="Age of Children"
+                    ng-model="initOptions.ChildArr[$index]"
+                    ng-options="age as age.name for age in ageOptions track by age.id">
+            </select>
+        </div>
+        <div class="row" style="margin-top: 4%">
+            <button type="submit" class="btn btn-primary">{{buttonMsg}}</button>
+        </div>
+    </form>
+
+  <!--<toaster-container toaster-options="{'time-out':0, 'close-button':false, 'animation-class': 'toast-bottom-full-width'}">-->
+  <!--</toaster-container>-->
+</div>
+
+

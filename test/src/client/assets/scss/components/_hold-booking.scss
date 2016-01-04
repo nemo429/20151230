@@ -1,0 +1,24 @@
+
+.HoldBooking {
+  text-align: center;
+
+  @include media-breakpoint-up(sm) {
+    padding: rem-calc(0 60 60 60);
+  }
+}
+
+.HoldBooking-title {
+  font-size: rem-calc(36);
+}
+
+.HoldBooking-subtitle {
+  margin-bottom: rem-calc(30);
+}
+
+.HoldBooking-cta {
+  margin-top: rem-calc(16);
+
+  @include media-breakpoint-up(sm) {
+    margin-top: rem-calc(40);
+  }
+}

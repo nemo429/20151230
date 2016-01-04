@@ -1,0 +1,46 @@
+// TODO: Just example util at the moment.
+
+//
+// @placeholders
+//
+
+// %u-textCompact {
+//   line-height: 1;
+//   margin: 0;
+// }
+
+//
+// @styles
+//
+
+// .u-textCompact {
+//   @extend %u-textCompact;
+// }
+//
+// .u-textMute {
+//   color: $base;
+// }
+
+.u-textUpperCase {
+  text-transform: uppercase;
+}
+
+.u-textLight {
+  font-weight: $text-light;
+}
+
+.u-textRegular {
+  font-weight: $text-regular;
+}
+
+.u-textBold {
+  font-weight: $text-bold;
+}
+
+.u-textParagraphLeading {
+  line-height: rem-calc(24);
+}
+
+.u-textCollapse {
+  margin: 0;
+}

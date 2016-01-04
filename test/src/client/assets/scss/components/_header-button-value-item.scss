@@ -1,0 +1,22 @@
+
+.HeaderButtonValueItem {
+  font-size: rem-calc(18);
+  font-weight: $text-light;
+
+  + .HeaderButtonValueItem {
+    margin-top: rem-calc(10);
+  }
+}
+
+.HeaderButtonValueItem-title {
+  margin-right: rem-calc(10);
+}
+
+.HeaderButtonValueItem-close {
+  @include icon-size(rem-calc(14));
+  cursor: pointer;
+
+  &.Icon * {
+    @include icon-color(white);
+  }
+}

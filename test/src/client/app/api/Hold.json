@@ -1,0 +1,63 @@
+{
+  "hotelCode": 1234,
+  "languageCode": "EN_US",
+  "currencyCode": "USD",
+  "reservations": [
+    {
+      "uniqueId" : 9999,
+      "resGlobalInfo": {
+        "timeSpan": {
+          "start": "2015-11-25",
+          "end": "2015-11-30"
+        }
+      },
+      "roomStays": {
+        "ratePlans": [
+          {
+            "ratePlanId": 0,
+            "ratePlanType": "PACKAGE"
+          }
+        ],
+        "roomRates": [
+          {
+            "numberOfUnits": 0,
+            "roomTypeCode": 0
+          }
+        ]
+      },
+      "roomRates": [
+        {
+          "roomTypeCode" : "0",
+          "numberOfUnits" : 1,
+          "rates" : [
+            {
+              "effectiveDate" : " 2015-12-15",
+              "unitMultiplier" : 1,
+              "base" : {
+                "amountBeforeTax" : "100.00"
+              }
+            },
+            {
+              "effectiveDate" : " 2015-12-16",
+              "unitMultiplier" : 2,
+              "base" : {
+                "amountBeforeTax" : "100.00"
+              }
+            },
+            {
+              "effectiveDate" : " 2015-12-17",
+              "unitMultiplier" : 3,
+              "base" : {
+                "amountBeforeTax" : "100.00"
+              }
+            }
+          ]
+        }
+      ],
+      "total" : {
+        "amountBeforeTax" : "300.00",
+        "amountAfterTax" : "450.00"
+      }
+    }
+  ]
+}

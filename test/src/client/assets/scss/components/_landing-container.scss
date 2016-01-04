@@ -1,0 +1,107 @@
+.LandingContainer{
+	background-image: url("../../images/landing/hero-poolside@1x.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: $font-family-base;
+	font-size: $font-size-base;
+	width: 100%;
+	color: #fff;
+	font-weight: 300;
+
+	@include media-breakpoint-up(md) {
+		background-image: url("../../images/landing/hero-poolside@2x.jpg");
+		min-height: 100vh;
+		padding-bottom: rem-calc(40);
+	}
+
+	&-message{
+		font-size: rem-calc(48);
+		line-height: rem-calc(50);
+		padding: rem-calc(40 10);
+
+		@include media-breakpoint-up(md) {
+			padding: rem-calc(60);
+			font-size: rem-calc(80);
+			line-height: rem-calc(80);
+		}
+
+		&-wrap{
+
+			@include media-breakpoint-up(lg) {
+				width: rem-calc(360);
+				display: inline-block;
+			}
+		}
+	}
+
+	&-registration{
+		background-color:#fff;
+		color:#444;
+		padding: rem-calc(40 20 0 20);
+
+		&-guarantee{
+				padding: rem-calc(20 0);
+				border-bottom: rem-calc(1) solid #ccc;
+
+				@include media-breakpoint-up(md) {
+					border-bottom: 0;
+				}
+			}
+
+		@include media-breakpoint-up(md) {
+			width: rem-calc(360);
+			margin-left: rem-calc(60);
+		}
+
+		@include media-breakpoint-up(lg) {
+			display: inline-block;
+			margin: rem-calc(0 60 0 0);
+		}
+	}
+
+	&--guestRooms{
+		// TODO: Darryll inject svgs inline so we can adjust the color
+		background: url("../../images/icons/chevron-down.svg");
+		background-repeat: no-repeat;
+		background-position: 88%;
+	}
+
+	&--promoCode{
+		// TODO: Darryll inject svgs inline so we can adjust the color
+		background: url("../../images/icons/add.svg");
+		background-repeat: no-repeat;
+		background-position: 95%;
+	}
+
+	&--bookingDate{
+		// TODO: Darryll inject svgs inline so we can adjust the color
+		background: url("../../images/icons/calendar.svg");
+		background-repeat: no-repeat;
+		background-position: 95%;
+	}
+
+	&-registrationForm{
+
+		&-subHeader{
+			font-size: rem-calc(18);
+			margin-top: rem-calc(-10);
+		}
+	}
+
+	&-body{
+
+		@include media-breakpoint-up(lg) {
+			display:flex;
+			margin-top: rem-calc(200);
+			justify-content: space-between;
+		}
+	}
+}
+
+.LandingContainer-hotelLogo{
+	margin:rem-calc(13 20 0 26);
+
+	.Icon * {
+		@include icon-color(white);
+	}
+}

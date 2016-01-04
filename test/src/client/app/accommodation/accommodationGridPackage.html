@@ -1,0 +1,30 @@
+<div class="AccommodationsGrid-card col-xs-12 col-md-6 col-lg-4">
+  <div class="CardGrid">
+    <div class="CardGrid-wrapper">
+      <div class="CardGrid-media">
+        <img class="img-responsive" ng-src="{{package.image.imageSource | imageUrlFilter}}" alt="{{package.packageName}}">
+        <span class="label label-info CardGrid-label">{{package.packageTag}}</span>
+        <div class="CardGrid-actions">
+          <!--Will need filter to display currency symbol, later in future-->
+          <!--TODO: Format with a FROM price on top of lowestRate-->
+          <div class="CardGrid-price">${{package.lowestRate}}</div>
+          <button class="btn btn-primary CardGrid-action" type="button" name="button" ng-click="setPackage(package);">Select
+          </button>
+        </div>
+      </div>
+      <div class="CardGrid-summary">
+        <a href="#"><h3 class="CardGrid-summary-title">{{package.packageName}}</h3></a>
+        <ul class="CardGrid-summary-offerings list-unstyled">
+          <li class ="CardGrid-summary-offering">
+            <span class="SVGIcon">
+            <img src="images/icons/bed.svg" ng-show="package.roomTypeName">
+            </span><span>{{package.roomFeatures[0].roomFeature}}</span></li>
+          <li class="CardGrid-summary-offering">
+            <span class="SVGIcon">
+            <img src="images/icons/occupant.svg" ng-show="package.roomTypeName">
+            </span><span>{{package.roomFeatures[2].roomFeature}}</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

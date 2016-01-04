@@ -1,0 +1,70 @@
+.HeaderAccommodationsButton {
+  position: relative;
+  display: flex;
+
+  .HeaderButton {
+    width: 100%;
+  }
+
+}
+
+.HeaderAccommodationsButton-hoverItems,
+.HeaderAccommodationsButton-notification {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: rem-calc(66);
+
+  @include media-breakpoint-up(md) {
+    top: rem-calc(85);
+  }
+
+  &-enter,
+  &-leave-active {
+    // transition: transform cubic-bezier(.76,.01,.3,1) 0.3s, opacity cubic-bezier(.76,.01,.3,1) 0.3s;
+    transition: transform ease-in 0.35s, opacity ease 0.2s;
+  }
+
+  &-leave,
+  &-enter-active {
+    // transition: transform cubic-bezier(.53,.53,0,1) 0.45s, opacity cubic-bezier(.53,.53,0,1) 0.45s;
+    transition: transform cubic-bezier(.53,.53,0,1) 0.4s, opacity cubic-bezier(.53,.53,0,1) 0.4s;
+  }
+
+  // These are created by React's TimeoutTransitionGroup component
+  &-enter {
+    transform: translateY(-15%);
+    opacity: 0;
+
+
+    &-active {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  &-leave {
+    transform: translateY(0);
+    opacity: 1;
+
+    &-active {
+      transform: translateY(-15%);
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+}
+
+.HeaderAccommodationsButton-hoverItems {
+  @include media-breakpoint-down(lg) {
+    // display: none;
+  }
+}
+
+.HeaderAccommodationsButton-valueItems {
+  margin-top: rem-calc(10);
+
+  @include media-breakpoint-up(xl) {
+    display: none;
+  }
+}

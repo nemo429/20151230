@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="TravelClApp">
+<head>
+    <meta charset="UTF-8">
+    <title>TravelClick</title>
+    <!--Javascript Loading-->
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-animate.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.14.3/ui-bootstrap-tpls.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-scroll/1.0.0/angular-scroll.min.js"></script>
+    <!--ng-toaster scripts-->
+    <script src="app/toaster/toaster.js"></script>
+    <script src="../../build/main.js"></script>
+    <link href="../../build/main.css" rel="stylesheet">
+    <link  href="app/aaa.css" rel="stylesheet">
+    <meta name="viewport" content="initial-scale=1.0">
+</head>
+<body ng-controller="MainController" class="Site">
+<!--<main class="Site-content">-->
+
+    <nav-bar></nav-bar>
+    <ui-view class="Site-pageWrapper"></ui-view>
+
+<toaster-container toaster-options="{'close-button':false}">
+</toaster-container>
+
+
+
+<!--<footer>-->
+<!--The Andreu-->
+<!--</footer>-->
+<!--</main>-->
+</body>
+</html>

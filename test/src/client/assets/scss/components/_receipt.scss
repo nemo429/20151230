@@ -1,0 +1,21 @@
+
+.Receipt {
+
+}
+
+.Receipt-footer {
+	margin-bottom: rem-calc(10);
+	padding-top: rem-calc(10);
+	margin-top: rem-calc(5);
+	border-top: $border-dotted;
+	border-bottom: $border-dotted;
+
+	.Table {
+		margin-bottom: rem-calc(10);
+	}
+}
+
+.Receipt-footer-code {
+  margin-bottom: rem-calc(16);
+  display: inline-block;
+}

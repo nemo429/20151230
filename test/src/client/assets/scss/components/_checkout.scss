@@ -1,0 +1,129 @@
+
+.Checkout {
+  position: relative;
+
+  &.is-disabledBlocker {
+    .Checkout-disabledBlocker {
+      pointer-events: all;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: transparent;
+      z-index: 1;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    .Section-displayTitle {
+      margin-bottom: rem-calc(34);
+    }
+  }
+}
+
+.Checkout-body {
+  min-height: 87vh;
+
+  @include media-breakpoint-up(lg) {
+    padding: rem-calc(40);
+  }
+}
+
+.Checkout-column {
+  margin-bottom: rem-calc(20);
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 0;
+    padding: rem-calc(0 15);
+    border-right: $border-dotted;
+
+    &:first-child {
+      .Checkout-section {
+        padding-left: 0;
+      }
+    }
+
+    &:last-child {
+      border: none;
+
+      .Checkout-section {
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+.Checkout-section {
+  @include media-breakpoint-up(lg) {
+    padding: rem-calc(0 25);
+  }
+}
+
+.Checkout-requests {
+  // TODO: Maybe create some generic spacing classes?
+  margin-top: rem-calc($spacer);
+}
+
+.Checkout-xButton {
+  margin-left: rem-calc(5);
+
+  .Icon * {
+    @include icon-color(#bbb);
+  }
+}
+
+.Checkout-payment-radios {
+  padding-top: rem-calc(12);
+  margin-bottom: rem-calc(28);
+}
+
+// Override/hardcode this since we don't have a dropdown built
+.Checkout-dropdown {
+  svg.Icon {
+    @include icon-size(rem-calc(12));
+    top: rem-calc(20);
+
+    * {
+      @include icon-color($body-color);
+    }
+  }
+}
+
+.Checkout-paypal {
+  width: rem-calc(53);
+  height: rem-calc(14);
+  vertical-align: text-bottom;
+}
+
+.Checkout-submit {
+  margin-top: rem-calc(20);
+
+  @include media-breakpoint-down(md) {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+  }
+}
+
+.Checkout-footer {
+  border-top: $border-dotted;
+  padding: rem-calc(34 0 96 0);
+}
+
+.Checkout-footer-title {
+  color: $brand-primary;
+  font-weight: 100;
+  font-size: rem-calc(20);
+}
+
+.Checkout-footer-secureLogo {
+  text-align: center;
+  margin-top: rem-calc(20);
+
+  @include media-breakpoint-up(lg) {
+    text-align: right;
+  }
+}
